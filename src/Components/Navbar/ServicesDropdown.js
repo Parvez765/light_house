@@ -117,7 +117,7 @@ const ServicesDropdown = () => {
 
       <div
         tabIndex={0}
-        className="dropdown-content flex gap-2 z-[1] px-6 pt-14 pb-2 drop-shadow-xl shadow-2xl bg-white 2xl:left-[-400px] rounded-xl w-[1000px]"
+        className="dropdown-content flex gap-2 z-[1] px-6 pt-14 pb-2 drop-shadow-xl shadow-2xl bg-white lg:left-[-370px] rounded-xl w-[1000px]"
       >
         <div className="mr-10">
           <h2 className="text-[#595a5c] text-sm font-semibold mb-4">

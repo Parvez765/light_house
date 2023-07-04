@@ -7,8 +7,8 @@ import ServicesDropdown from "./ServicesDropdown";
 
 const NavbarComp1 = () => {
   return (
-    <div className="grid grid-cols-4 py-4 px-4">
-      <div className="border border-black flex justify-center items-center">
+    <div className="flex justify-between items-center py-4 px-10 lg:px-2 xl:px-16 2xl:px-32">
+      <div className="flex justify-center items-center">
         <NavLink to="/">
           <img
             src={logo}
@@ -18,7 +18,7 @@ const NavbarComp1 = () => {
         </NavLink>
       </div>
 
-      <div className="col-span-2 flex justify-center items-center gap-4 border border-black">
+      <div className="hidden lg:flex justify-center items-center gap-4">
         <NavLink
           to="/how_it_works"
           className="text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out"
@@ -46,10 +46,10 @@ const NavbarComp1 = () => {
         </NavLink>
       </div>
 
-      <div className="flex justify-center items-center gap-2 border border-black">
+      <div className="hidden lg:flex justify-center items-center gap-2">
         <NavLink
           to="/get_quote"
-          className="text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out mr-4"
+          className="text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out mr-2 xl:mr-4"
         >
           <h2 className="text-lg xl:text-xl font-semibold">Get a quote</h2>
         </NavLink>
