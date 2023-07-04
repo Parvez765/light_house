@@ -2,14 +2,23 @@ import React, { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaCrop } from "react-icons/fa";
 import { ImHeadphones } from "react-icons/im";
+import { LiaGlassesSolid } from "react-icons/lia";
 import {
   FaPenNib,
   FaTshirt,
   FaVectorSquare,
   FaPersonBooth,
+  FaCar,
+  FaPizzaSlice,
 } from "react-icons/fa";
 
-import { GiCutDiamond, GiBottleVapors } from "react-icons/gi";
+import {
+  GiCutDiamond,
+  GiBottleVapors,
+  GiSofa,
+  GiConverseShoe,
+  GiFamilyHouse,
+} from "react-icons/gi";
 import "./ServicesDropdown.css";
 
 const ServicesDropdown = () => {
@@ -33,34 +42,64 @@ const ServicesDropdown = () => {
 
   const services = [
     {
-      icon: <FaCrop className="text-sky-600" />,
+      icon: <FaCrop className="text-sky-600 text-xl" />,
       title: "Editorial Retouching",
-      description: "We Make Every Part of Your Image Tell A Great Story",
+      description: "Make Your Image Tell A Great Story",
     },
     {
-      icon: <GiCutDiamond className="text-sky-600" />,
+      icon: <GiCutDiamond className="text-sky-600 text-xl" />,
       title: "Jewelry Retouching",
       description: "Glare With Glimmer",
     },
     {
-      icon: <FaPersonBooth className="text-sky-600" />,
+      icon: <FaPersonBooth className="text-sky-600 text-xl" />,
       title: "Model & Skin Retouching",
       description: "With You - All The Way",
     },
     {
-      icon: <FaTshirt className="text-sky-600" />,
+      icon: <FaTshirt className="text-sky-600 text-xl" />,
       title: "Apparel Retouching",
       description: "Trend Up Your Style Game",
     },
     {
-      icon: <GiBottleVapors className="text-sky-600" />,
+      icon: <GiBottleVapors className="text-sky-600 text-xl" />,
       title: "Cosmetics Retouching",
       description: "What looks beautiful, feels beautiful!",
     },
     {
-      icon: <ImHeadphones className="text-sky-600" />,
+      icon: <ImHeadphones className="text-sky-600 text-xl" />,
       title: "Fashion Retouching",
       description: "Create Your Brand Story",
+    },
+    {
+      icon: <GiSofa className="text-sky-600 text-xl" />,
+      title: "Furniture Retouching",
+      description: "Scale Up With Us",
+    },
+    {
+      icon: <LiaGlassesSolid className="text-sky-600 text-xl" />,
+      title: "EyeWear Retouching",
+      description: "Blending Perfection With Style",
+    },
+    {
+      icon: <GiConverseShoe className="text-sky-600 text-xl" />,
+      title: "FootWear Retouching",
+      description: "Tell Your Brand Story With Us",
+    },
+    {
+      icon: <FaCar className="text-sky-600 text-xl" />,
+      title: "Automotive Retouching",
+      description: "Get Your Automation done",
+    },
+    {
+      icon: <GiFamilyHouse className="text-sky-600 text-xl" />,
+      title: "Real Estate Retouching",
+      description: "Make Interior & Exterior Beautiful",
+    },
+    {
+      icon: <FaPizzaSlice className="text-sky-600 text-xl" />,
+      title: "Food Retouching",
+      description: "Make Your Food Picture Lit",
     },
   ];
 
@@ -78,7 +117,7 @@ const ServicesDropdown = () => {
 
       <div
         tabIndex={0}
-        className="dropdown-content flex gap-2 z-[1] p-2 drop-shadow-2xl shadow-2xl bg-white border border-black rounded-xl w-[1000px] h-[400px]"
+        className="dropdown-content flex gap-2 z-[1] px-6 pt-14 pb-2 drop-shadow-xl shadow-2xl bg-white 2xl:left-[-400px] rounded-xl w-[1000px]"
       >
         <div className="mr-10">
           <h2 className="text-[#595a5c] text-sm font-semibold mb-4">
@@ -86,7 +125,7 @@ const ServicesDropdown = () => {
           </h2>
 
           <div className="flex items-center gap-2 mb-4 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out">
-            <FaCrop className="text-[#595a5c]" />
+            <FaCrop className="text-[#595a5c] text-xl" />
 
             <div>
               <h2 className="text-base font-bold">Multi Clipping Path</h2>
@@ -97,7 +136,7 @@ const ServicesDropdown = () => {
           </div>
 
           <div className="flex items-center gap-2 mb-4 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out">
-            <FaPenNib className="text-[#595a5c]" />
+            <FaPenNib className="text-[#595a5c] text-xl" />
 
             <div>
               <h2 className="text-base font-bold">Clipping Path</h2>
@@ -108,7 +147,7 @@ const ServicesDropdown = () => {
           </div>
 
           <div className="flex items-center gap-2 mb-4 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out">
-            <FaTshirt className="text-[#595a5c]" />
+            <FaTshirt className="text-[#595a5c] text-xl" />
 
             <div>
               <h2 className="text-base font-bold">Invisible Mannequin</h2>
@@ -119,7 +158,7 @@ const ServicesDropdown = () => {
           </div>
 
           <div className="flex items-center gap-2 mb-4 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out">
-            <FaVectorSquare className="text-[#595a5c]" />
+            <FaVectorSquare className="text-[#595a5c] text-xl" />
 
             <div>
               <h2 className="text-base font-bold">Vector Conversion</h2>
@@ -135,30 +174,30 @@ const ServicesDropdown = () => {
             High-end Retouching Services
           </h2>
 
-          <div>
-            {services.map((service, index) => (
-              <div className="h-[55px]" key={index}>
-                <div
-                  className="flex items-center gap-2"
-                  onMouseOver={() => handleMouseOver(index)}
-                  onMouseOut={() => handleMouseOut(index)}
-                >
-                  {service.icon}
-                  <h2 className="text-base font-bold duration-300 ease-in-out hover:text-sky-600 hover:cursor-pointer">
-                    {service.title}
-                  </h2>
+          <div className="w-[600px]">
+            <div className="grid grid-flow-col-dense grid-cols-2 grid-rows-6 gap-x-10">
+              {services.map((service, index) => (
+                <div className="h-[55px]" key={index}>
+                  <div
+                    className="flex items-center gap-2 hover:cursor-pointer duration-300 ease-in-out hover:text-sky-600"
+                    onMouseOver={() => handleMouseOver(index)}
+                    onMouseOut={() => handleMouseOut(index)}
+                  >
+                    {service.icon}
+                    <h2 className="text-base font-bold">{service.title}</h2>
+                  </div>
+                  <div>
+                    {hoverStates[index] && (
+                      <div className="slide-effect">
+                        <h2 className="slideDown ml-[28px] text-[#595a5c] text-sm font-medium">
+                          {service.description}
+                        </h2>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div>
-                  {hoverStates[index] && (
-                    <div className="slide-effect">
-                      <h2 className="slideDown ml-[25px] text-[#595a5c] text-sm font-medium">
-                        {service.description}
-                      </h2>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
