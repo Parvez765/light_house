@@ -3,7 +3,7 @@ import NavbarComp1 from "../../Components/Navbar/NavbarComp1";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="sticky top-0 bg-white">
       <NavbarComp1 />
     </div>
   );

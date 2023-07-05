@@ -25,15 +25,60 @@ const TrustedCompanies = () => {
       </div>
 
       <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-5 mx-4 md:mx-10 lg:mx-24 xl:mx-48 2xl:mx-96">
-        <img src={comp1} alt="" srcset="" />
-        <img src={comp2} alt="" srcset="" />
-        <img src={comp3} alt="" srcset="" />
-        <img src={comp4} alt="" srcset="" />
-        <img src={comp5} alt="" srcset="" />
-        <img src={comp6} alt="" srcset="" />
-        <img src={comp7} alt="" srcset="" />
-        <img src={comp8} alt="" srcset="" />
-        <img src={comp9} alt="" srcset="" />
+        <img
+          src={comp1}
+          className="hover:scale-110 duration-300 ease-in-out"
+          alt=""
+          srcset=""
+        />
+        <img
+          src={comp2}
+          className="hover:scale-110 duration-300 ease-in-out"
+          alt=""
+          srcset=""
+        />
+        <img
+          src={comp3}
+          className="hover:scale-110 duration-300 ease-in-out"
+          alt=""
+          srcset=""
+        />
+        <img
+          src={comp4}
+          className="hover:scale-110 duration-300 ease-in-out"
+          alt=""
+          srcset=""
+        />
+        <img
+          src={comp5}
+          className="hover:scale-110 duration-300 ease-in-out"
+          alt=""
+          srcset=""
+        />
+        <img
+          src={comp6}
+          className="hover:scale-110 duration-300 ease-in-out"
+          alt=""
+          srcset=""
+        />
+        <img
+          src={comp7}
+          className="hover:scale-110 duration-300 ease-in-out"
+          alt=""
+          srcset=""
+        />
+        <img
+          src={comp8}
+          className="hover:scale-110 duration-300 ease-in-out"
+          alt=""
+          srcset=""
+        />
+        <img
+          src={comp9}
+          className="hover:scale-110 duration-300 ease-in-out"
+          alt=""
+          srcset=""
+        />
       </div>
     </div>
   );
