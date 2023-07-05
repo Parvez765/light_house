@@ -1,5 +1,4 @@
 import React from "react";
-import "./TrustedCompanies.css";
 import backgroundLine from "../../../Assets/TrustedCompanies/Vector_1.png";
 import comp1 from "../../../Assets/TrustedCompanies/Company_1.png";
 import comp2 from "../../../Assets/TrustedCompanies/Company_2.png";
@@ -13,7 +12,7 @@ import comp9 from "../../../Assets/TrustedCompanies/Company_9.png";
 
 const TrustedCompanies = () => {
   return (
-    <div>
+    <div className="mb-10">
       <div className="mx-4 mb-6">
         <h2 className="text-center text-3xl font-medium">
           Trusted by <span className="text-sky-600 font-semibold">4,000+</span>{" "}
