@@ -42,7 +42,7 @@ const WhoWeHelp = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 lg:px-10 mx-10 xl:mx-20 2xl:mx-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 lg:px-10 xl:mx-20 2xl:mx-32">
           {ourCustomers?.map((customers) => (
             <div className="p-6 hover:bg-sky-200 duration-500 ease-in-out rounded-xl">
               <h2 className="text-2xl font-semibold text-center md:text-left mb-2">
