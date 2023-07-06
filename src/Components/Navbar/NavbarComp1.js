@@ -18,7 +18,7 @@ const NavbarComp1 = () => {
         </NavLink>
       </div>
 
-      <div className="hidden lg:flex justify-center items-center 2xl:gap-12">
+      <div className="hidden lg:flex justify-center items-center gap-4 2xl:gap-12">
         <NavLink
           to="/how_it_works"
           className="text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out"

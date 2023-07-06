@@ -74,12 +74,10 @@ const PhotoEditingServices = () => {
                       {services?.details}
                     </h2>
 
-                    <div className="flex justify-center md:block">
-                      <div className="flex items-center gap-2 hover:cursor-pointer">
-                        <h2 className="text-lg font-semibold text-sky-600">
-                          Learn More
-                        </h2>
-                        <AiOutlineArrowRight className="text-lg font-semibold text-sky-600" />
+                    <div className="flex justify-center md:justify-start">
+                      <div className="flex items-center gap-2 hover:cursor-pointer hover:bg-sky-600 text-sky-600 hover:text-white duration-300 ease-in-out border border-sky-600 hover:border-transparent rounded-r-xl px-4 py-1">
+                        <h2 className="text-lg font-semibold">Learn More</h2>
+                        <AiOutlineArrowRight className="text-lg font-semibold" />
                       </div>
                     </div>
                   </div>

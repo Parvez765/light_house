@@ -12,7 +12,7 @@ import comp9 from "../../../Assets/TrustedCompanies/Company_9.png";
 
 const TrustedCompanies = () => {
   return (
-    <div className="mb-10">
+    <div className="mb-16">
       <div className="mx-4 mb-6">
         <h2 className="text-center text-3xl font-medium">
           Trusted by <span className="text-sky-600 font-semibold">4,000+</span>{" "}
