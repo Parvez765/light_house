@@ -33,7 +33,7 @@ const WhoWeHelp = () => {
   ];
   return (
     <div>
-      <div>
+      <div className="py-10 bg-gradient-to-br from-indigo-50 from-50% to-sky-600 to-90%">
         <div className="mb-10 mx-4">
           <h2 className="text-4xl font-bold text-center mb-4">Who We Help</h2>
           <h2 className="text-[#595a5c] text-lg font-medium text-center">
@@ -42,9 +42,9 @@ const WhoWeHelp = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 lg:px-10 xl:mx-20 2xl:mx-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 lg:px-10 mx-2 xl:mx-20 2xl:mx-32">
           {ourCustomers?.map((customers) => (
-            <div className="p-6 hover:bg-sky-200 duration-500 ease-in-out rounded-xl">
+            <div className="p-6 hover:bg-blue-200 duration-500 ease-in-out rounded-xl">
               <h2 className="text-2xl font-semibold text-center md:text-left mb-2">
                 {customers?.title}
               </h2>

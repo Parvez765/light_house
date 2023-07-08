@@ -63,7 +63,7 @@ const PhotoEditingServices = () => {
 
         <div>
           {editingServices?.map((services) => (
-            <div className="flex justify-center">
+            <div className="flex justify-center border border-black">
               <div className="flex flex-col-reverse md:flex-row justify-between gap-8 mb-16 mx-10">
                 <div className="flex justify-center md:flex-none">
                   <div className="md:w-[300px]">
