@@ -56,7 +56,7 @@ const NavbarComp1 = () => {
 
         <NavLink
           to="/login"
-          className="textColor hover:bg-sky-600 hover:text-white border border-gray-400 hover:border-transparent rounded-lg duration-300 ease-in-out"
+          className="hover:bg-sky-600 hover:text-white border border-gray-400 hover:border-transparent rounded-lg duration-300 ease-in-out"
         >
           <h2 className="text-lg xl:text-xl font-semibold py-1.5 px-4">
             Login
