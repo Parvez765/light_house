@@ -7,11 +7,13 @@ import {
   BsYoutube,
   BsLinkedin,
 } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 
 const FooterComp1 = () => {
   return (
     <div>
-      <div className="flex justify-between gap-4">
+      {/* Trial advertisement and marketing */}
+      <div className="flex justify-between gap-4 mb-20">
         <div>
           <h2 className="text-3xl font-bold mb-4">
             Start your 30-day free trial
@@ -32,17 +34,94 @@ const FooterComp1 = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-6">
-        <div className="">
-          <img src={logo} className="w-[250px]" alt="" />
+      <div className="flex justify-between gap-6">
+        {/* Logo and social links */}
+        <div className="flex flex-col gap-6">
+          <NavLink to="/" className="hover:scale-105 duration-300 ease-in-out">
+            <img src={logo} className="w-[250px]" alt="" />
+          </NavLink>
+
+          <div className="flex items-center gap-8">
+            <BsFacebook className="text-2xl text-gray-400 hover:text-black duration-300 ease-in-out hover:cursor-pointer" />
+            <BsInstagram className="text-2xl text-gray-400 hover:text-black duration-300 ease-in-out hover:cursor-pointer" />
+            <BsTwitter className="text-2xl text-gray-400 hover:text-black duration-300 ease-in-out hover:cursor-pointer" />
+            <BsYoutube className="text-2xl text-gray-400 hover:text-black duration-300 ease-in-out hover:cursor-pointer" />
+            <BsLinkedin className="text-2xl text-gray-400 hover:text-black duration-300 ease-in-out hover:cursor-pointer" />
+          </div>
         </div>
 
-        <div className="flex items-center gap-8">
-          <BsFacebook className="text-2xl text-gray-400 hover:text-black duration-300 ease-in-out hover:cursor-pointer" />
-          <BsInstagram className="text-2xl text-gray-400 hover:text-black duration-300 ease-in-out hover:cursor-pointer" />
-          <BsTwitter className="text-2xl text-gray-400 hover:text-black duration-300 ease-in-out hover:cursor-pointer" />
-          <BsYoutube className="text-2xl text-gray-400 hover:text-black duration-300 ease-in-out hover:cursor-pointer" />
-          <BsLinkedin className="text-2xl text-gray-400 hover:text-black duration-300 ease-in-out hover:cursor-pointer" />
+        {/* Parent Div of All Footer Links */}
+        <div className="flex gap-6">
+          <div>
+            <h2 className="text-lg font-semibold mb-2">Services</h2>
+
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Clipping Path
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Multi-Clipping Path
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Ghost Mannequin
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Photo Retouching
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Vector Conversion
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Embroidery Digitizing
+            </h2>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold mb-2">About</h2>
+
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Testimonials
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              About Us
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Our Team
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Careers
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              FAQs
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Terms & Conditions
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Privacy Policy
+            </h2>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold mb-2">Support</h2>
+
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Contact Us
+            </h2>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold mb-2">Business</h2>
+
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Get Free Trial
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Get A Quote
+            </h2>
+            <h2 className="text-gray-500 font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer mb-1">
+              Sign In/Up
+            </h2>
+          </div>
         </div>
       </div>
     </div>
