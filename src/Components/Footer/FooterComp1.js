@@ -1,5 +1,15 @@
 import React from "react";
 import logo from "../../Assets/logo.png";
+import stripeLogo from "../../Assets/Footer/stripe.png";
+import stripe1 from "../../Assets/Footer/Payment_1.png";
+import stripe2 from "../../Assets/Footer/Payment_2.png";
+import stripe3 from "../../Assets/Footer/Payment_3.png";
+import stripe4 from "../../Assets/Footer/Payment_4.png";
+import stripe5 from "../../Assets/Footer/Payment_5.png";
+import stripe6 from "../../Assets/Footer/Payment_6.png";
+import stripe7 from "../../Assets/Footer/Payment_7.png";
+import stripe8 from "../../Assets/Footer/Payment_8.png";
+
 import {
   BsFacebook,
   BsInstagram,
@@ -34,7 +44,7 @@ const FooterComp1 = () => {
         </div>
       </div>
 
-      <div className="flex justify-between gap-6">
+      <div className="flex justify-between gap-6 mb-10">
         {/* Logo and social links */}
         <div className="flex flex-col gap-6">
           <NavLink to="/" className="hover:scale-105 duration-300 ease-in-out">
@@ -123,6 +133,25 @@ const FooterComp1 = () => {
             </h2>
           </div>
         </div>
+      </div>
+
+      <div className="flex items-center gap-2 mb-3">
+        <div>
+          <img src={stripeLogo} className="w-[150px]" alt="" />
+        </div>
+
+        <h2 className="font-medium">Guaranteed safe & secure checkout</h2>
+      </div>
+
+      <div className="flex items-center gap-4">
+        <img src={stripe1} className="w-[60px]" alt="" />
+        <img src={stripe2} className="w-[60px]" alt="" />
+        <img src={stripe3} className="w-[60px]" alt="" />
+        <img src={stripe4} className="w-[60px]" alt="" />
+        <img src={stripe5} className="w-[60px]" alt="" />
+        <img src={stripe6} className="w-[60px]" alt="" />
+        <img src={stripe7} className="w-[60px]" alt="" />
+        <img src={stripe8} className="w-[60px]" alt="" />
       </div>
     </div>
   );
