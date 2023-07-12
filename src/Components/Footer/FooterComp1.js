@@ -195,11 +195,11 @@ const FooterComp1 = () => {
         </h2>
 
         <div className="flex items-center gap-2">
-          <h2 className="text-gray-500 text-lg font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer">
+          <h2 className="text-gray-500 text-sm sm:text-lg font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer">
             Privacy Policy
           </h2>
-          <h2 className="text-gray-500 text-lg font-medium">|</h2>
-          <h2 className="text-gray-500 text-lg font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer">
+          <h2 className="text-gray-500 text-sm sm:text-lg font-medium">|</h2>
+          <h2 className="text-gray-500 text-sm sm:text-lg font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer">
             Terms & Conditions
           </h2>
         </div>
