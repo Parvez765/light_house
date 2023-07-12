@@ -31,6 +31,7 @@ const WhoWeHelp = () => {
       img: frame4,
     },
   ];
+
   return (
     <div>
       <div className="py-10 bg-gradient-to-br from-indigo-50 from-50% to-sky-600 to-90%">
