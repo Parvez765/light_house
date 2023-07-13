@@ -69,8 +69,20 @@ const Testimonials = () => {
       </div>
 
       <Swiper
-        slidesPerView={2}
-        spaceBetween={30}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+        }}
         loop={true}
         autoplay={{
           delay: 4000,
@@ -87,7 +99,7 @@ const Testimonials = () => {
               <div className="rounded-xl bg-gradient-to-tl from-sky-300 from-10% to-white to-50% hover:from-blue-400 duration-500 ease-in-out py-6 px-6">
                 <div className="mb-10">
                   <img src={inverted} alt="" />
-                  <h2 className="text-lg font-medium mt-1 mr-24">
+                  <h2 className="text-lg font-medium mt-1 xl:mr-24">
                     {testimonial?.comment.slice(0, 130)}...
                   </h2>
                 </div>
@@ -108,6 +120,14 @@ const Testimonials = () => {
                     </div>
                   </div>
 
+                  <img
+                    src={testimonial?.companyImg}
+                    className="hidden xl:block"
+                    alt=""
+                  />
+                </div>
+
+                <div className="flex xl:hidden justify-end mt-2">
                   <img src={testimonial?.companyImg} alt="" />
                 </div>
               </div>
