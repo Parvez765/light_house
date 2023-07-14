@@ -60,7 +60,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="my-16">
+    <div className="my-20">
       <div className="mb-10">
         <h2 className="text-4xl font-bold text-center mb-4">Testimonials</h2>
         <h2 className="text-[#595a5c] text-lg font-medium text-center">
@@ -69,14 +69,12 @@ const Testimonials = () => {
       </div>
 
       <Swiper
+        slidesPerView={1}
+        spaceBetween={20}
         breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-          },
           768: {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 20,
           },
           1024: {
             slidesPerView: 2,
@@ -96,7 +94,7 @@ const Testimonials = () => {
         {testimonials?.map((testimonial, i) => {
           return (
             <SwiperSlide key={i}>
-              <div className="rounded-xl bg-gradient-to-tl from-sky-300 from-10% to-white to-50% hover:from-blue-400 duration-500 ease-in-out py-6 px-6">
+              <div className="rounded-xl bg-gradient-to-br from-blue-300 from-10% via-white via-40% to-sky-200 to-90% duration-500 ease-in-out py-6 px-6 shadow-2xl drop-shadow-lg">
                 <div className="mb-10">
                   <img src={inverted} alt="" />
                   <h2 className="text-lg font-medium mt-1 xl:mr-24">
