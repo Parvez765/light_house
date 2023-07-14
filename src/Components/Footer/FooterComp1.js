@@ -21,7 +21,7 @@ import { NavLink } from "react-router-dom";
 
 const FooterComp1 = () => {
   return (
-    <div className="my-6 mx-4 md:mx-12 lg:mx-24 2xl:mx-32">
+    <div className="py-6 px-4 md:px-12 lg:px-24 2xl:px-32 bg-gradient-to-r from-sky-200 to-sky-100">
       {/* Trial advertisement and marketing */}
       <div className="flex flex-col items-center lg:flex-row lg:justify-between gap-4 mb-20 mx-6">
         <div>
@@ -135,57 +135,59 @@ const FooterComp1 = () => {
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center gap-2 mb-6 mx-6">
-        <div>
-          <img src={stripeLogo} className="w-[150px]" alt="" />
+      <div>
+        <div className="flex flex-col sm:flex-row items-center gap-2 mb-6 mx-6">
+          <div>
+            <img src={stripeLogo} className="w-[150px]" alt="" />
+          </div>
+
+          <h2 className="font-medium text-center md:text-left">
+            Guaranteed safe & secure checkout
+          </h2>
         </div>
 
-        <h2 className="font-medium text-center md:text-left">
-          Guaranteed safe & secure checkout
-        </h2>
-      </div>
-
-      <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 mx-6 mb-4">
-        <img
-          src={stripe1}
-          className="w-[60px] hover:scale-110 duration-300 ease-in-out"
-          alt=""
-        />
-        <img
-          src={stripe2}
-          className="w-[60px] hover:scale-110 duration-300 ease-in-out"
-          alt=""
-        />
-        <img
-          src={stripe3}
-          className="w-[60px] hover:scale-110 duration-300 ease-in-out"
-          alt=""
-        />
-        <img
-          src={stripe4}
-          className="w-[60px] hover:scale-110 duration-300 ease-in-out"
-          alt=""
-        />
-        <img
-          src={stripe5}
-          className="w-[60px] hover:scale-110 duration-300 ease-in-out"
-          alt=""
-        />
-        <img
-          src={stripe6}
-          className="w-[60px] hover:scale-110 duration-300 ease-in-out"
-          alt=""
-        />
-        <img
-          src={stripe7}
-          className="w-[60px] hover:scale-110 duration-300 ease-in-out"
-          alt=""
-        />
-        <img
-          src={stripe8}
-          className="w-[60px] hover:scale-110 duration-300 ease-in-out"
-          alt=""
-        />
+        <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 mx-6 mb-4">
+          <img
+            src={stripe1}
+            className="w-[60px] hover:scale-110 duration-300 ease-in-out"
+            alt=""
+          />
+          <img
+            src={stripe2}
+            className="w-[60px] hover:scale-110 duration-300 ease-in-out"
+            alt=""
+          />
+          <img
+            src={stripe3}
+            className="w-[60px] hover:scale-110 duration-300 ease-in-out"
+            alt=""
+          />
+          <img
+            src={stripe4}
+            className="w-[60px] hover:scale-110 duration-300 ease-in-out"
+            alt=""
+          />
+          <img
+            src={stripe5}
+            className="w-[60px] hover:scale-110 duration-300 ease-in-out"
+            alt=""
+          />
+          <img
+            src={stripe6}
+            className="w-[60px] hover:scale-110 duration-300 ease-in-out"
+            alt=""
+          />
+          <img
+            src={stripe7}
+            className="w-[60px] hover:scale-110 duration-300 ease-in-out"
+            alt=""
+          />
+          <img
+            src={stripe8}
+            className="w-[60px] hover:scale-110 duration-300 ease-in-out"
+            alt=""
+          />
+        </div>
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between items-center gap-2 lg:gap-10 mx-6">
@@ -195,11 +197,11 @@ const FooterComp1 = () => {
         </h2>
 
         <div className="flex items-center gap-2">
-          <h2 className="text-gray-500 text-lg font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer">
+          <h2 className="text-gray-500 text-sm sm:text-lg font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer">
             Privacy Policy
           </h2>
-          <h2 className="text-gray-500 text-lg font-medium">|</h2>
-          <h2 className="text-gray-500 text-lg font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer">
+          <h2 className="text-gray-500 text-sm sm:text-lg font-medium">|</h2>
+          <h2 className="text-gray-500 text-sm sm:text-lg font-medium hover:text-black duration-300 ease-in-out hover:cursor-pointer">
             Terms & Conditions
           </h2>
         </div>
