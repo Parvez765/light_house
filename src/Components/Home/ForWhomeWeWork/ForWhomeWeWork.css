@@ -1,0 +1,5 @@
+.workingContainer{
+    background: linear-gradient(rgb(255, 255, 255), rgb(198, 255, 193));
+    /* height: 100vh; */
+    padding: 40px;
+}

@@ -4,6 +4,7 @@ import TrustedCompanies from "../../Components/Home/TrustedCompanies/TrustedComp
 import WhoWeHelp from "../../Components/Home/WhoWeHelp/WhoWeHelp";
 import PhotoEditingServices from "../../Components/Home/PhotoEditingServices/PhotoEditingServices";
 import DeliveryService from "../../Components/Home/DeliveryService/DeliveryService";
+import ForWhomeWeWork from "../../Components/Home/ForWhomeWeWork/ForWhomeWeWork";
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <Hero />
       <DeliveryService/>
       <TrustedCompanies />
+      <ForWhomeWeWork/>
       <PhotoEditingServices />
       <WhoWeHelp />
     </div>
