@@ -94,7 +94,7 @@ const Testimonials = () => {
         {testimonials?.map((testimonial, i) => {
           return (
             <SwiperSlide key={i}>
-              <div className="rounded-xl bg-gradient-to-br from-blue-300 from-10% via-white via-40% to-sky-200 to-90% duration-500 ease-in-out py-6 px-6 shadow-2xl drop-shadow-lg">
+              <div className="rounded-xl bg-gradient-to-br from-blue-200 from-10% via-white via-40% to-sky-200 to-90% duration-500 ease-in-out py-6 px-6 shadow-2xl drop-shadow-lg">
                 <div className="mb-10">
                   <img src={inverted} alt="" />
                   <h2 className="text-lg font-medium mt-1 xl:mr-24">
