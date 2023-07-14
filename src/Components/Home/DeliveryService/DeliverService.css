@@ -1,0 +1,19 @@
+.serviceContentContainer{
+    background: linear-gradient(rgb(214, 249, 255), rgb(255, 255, 255));
+    padding: 40px;
+}
+
+.serviceContainer{
+    background: linear-gradient(rgb(226, 226, 255), rgb(210, 255, 210));
+    border-radius: 12px;
+
+}
+.serviceImage{
+    border-radius: 12px;
+}
+.buildTeamBtn{
+    color: blue;
+    font-weight: 700;
+    font-size: 16px;
+    
+}
