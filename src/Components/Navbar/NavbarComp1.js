@@ -4,10 +4,11 @@ import { NavLink } from "react-router-dom";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import "./NavbarComp1.css";
 import ServicesDropdown from "./ServicesDropdown";
+import "./NavbarComp1.css"
 
 const NavbarComp1 = () => {
   return (
-    <div className="flex justify-between items-center py-4 px-10 lg:px-2 xl:px-16 2xl:px-32">
+    <div className="flex justify-between items-center py-4 px-10 lg:px-2 xl:px-16 2xl:px-32 navItem">
       <div className="flex justify-center items-center">
         <NavLink to="/">
           <img
