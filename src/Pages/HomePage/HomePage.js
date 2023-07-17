@@ -6,14 +6,16 @@ import PhotoEditingServices from "../../Components/Home/PhotoEditingServices/Pho
 import DeliveryService from "../../Components/Home/DeliveryService/DeliveryService";
 import ForWhomeWeWork from "../../Components/Home/ForWhomeWeWork/ForWhomeWeWork";
 import Testimonials from "../../Components/Home/Testimonials/Testimonials";
+import LetsGetStarted from "../../Components/Home/LetsGetStarted/LetsGetStarted";
 
 const HomePage = () => {
   return (
     <div>
       <Hero />
-      <DeliveryService/>
+      <DeliveryService />
       <TrustedCompanies />
-      <ForWhomeWeWork/>
+      <ForWhomeWeWork />
+      <LetsGetStarted />
       <PhotoEditingServices />
       <WhoWeHelp />
       <Testimonials />
