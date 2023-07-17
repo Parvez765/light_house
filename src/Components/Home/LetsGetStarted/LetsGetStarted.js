@@ -68,9 +68,9 @@ const LetsGetStarted = () => {
           </h2>
         </div>
 
-        <div className="flex justify-center">
-          <div className="flex justify-center gap-2 bg-cyan-300 py-4 px-2 rounded-xl w-[1100px]">
-            <div className="flex flex-col">
+        <div className="flex justify-center pb-20 bg-gradient-to-bl from-cyan-200 from-10% via-white via-30% to-cyan-200 to-90% px-4">
+          <div className="flex flex-col xl:flex-row justify-center items-center xl:items-start gap-2 bg-gradient-to-br from-cyan-200 from-10% via-white via-60% to-cyan-200 to-90% py-4 px-4 rounded-xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 xl:flex xl:flex-col xl:w-[250px] bg-gradient-to-tl from-cyan-200 to-white rounded-xl">
               <div
                 className={`border-[2px] border-white hover:cursor-pointer rounded-t-xl py-3 px-1 ${
                   activeComponent === "component1" ? "bg-gray-200" : ""
@@ -81,8 +81,9 @@ const LetsGetStarted = () => {
               >
                 <div
                   className={
-                    "flex justify-center mb-2 text-5xl duration-300 ease-in-out " +
-                    (isHovered1 ? "text-sky-600" : "text-[#595a5c]")
+                    `flex justify-center mb-2 text-3xl lg:text-5xl duration-300 ease-in-out ${
+                      activeComponent === "component1" ? "text-sky-600" : ""
+                    } ` + (isHovered1 ? "text-sky-600" : "text-[#595a5c]")
                   }
                 >
                   <AiOutlineLike />
@@ -90,13 +91,14 @@ const LetsGetStarted = () => {
 
                 <h2
                   className={
-                    "text-center text-2xl font-semibold mb-2 duration-500 ease-in-out " +
-                    (isHovered1 ? "text-black" : "text-[#595a5c]")
+                    `text-center text-xl lg:text-2xl font-semibold mb-2 duration-500 ease-in-out ${
+                      activeComponent === "component1" ? "text-black" : ""
+                    } ` + (isHovered1 ? "text-black" : "text-[#595a5c]")
                   }
                 >
                   Try Us For Free
                 </h2>
-                <h2 className="text-center text-lg">
+                <h2 className="text-center text-sm lg:text-lg">
                   Check our service quality
                 </h2>
               </div>
@@ -111,8 +113,9 @@ const LetsGetStarted = () => {
               >
                 <div
                   className={
-                    "flex justify-center mb-2 text-5xl duration-300 ease-in-out " +
-                    (isHovered2 ? "text-sky-600" : "text-[#595a5c]")
+                    `flex justify-center mb-2 text-3xl lg:text-5xl duration-300 ease-in-out ${
+                      activeComponent === "component2" ? "text-sky-600" : ""
+                    } ` + (isHovered2 ? "text-sky-600" : "text-[#595a5c]")
                   }
                 >
                   <BsClipboardCheck />
@@ -120,13 +123,16 @@ const LetsGetStarted = () => {
 
                 <h2
                   className={
-                    "text-center text-2xl font-semibold mb-2 duration-500 ease-in-out " +
-                    (isHovered2 ? "text-black" : "text-[#595a5c]")
+                    `text-center text-xl lg:text-2xl font-semibold mb-2 duration-500 ease-in-out ${
+                      activeComponent === "component2" ? "text-black" : ""
+                    } ` + (isHovered2 ? "text-black" : "text-[#595a5c]")
                   }
                 >
                   Get A Quote
                 </h2>
-                <h2 className="text-center text-lg">Let us quote you</h2>
+                <h2 className="text-center text-sm lg:text-lg">
+                  Let us quote you
+                </h2>
               </div>
 
               <div
@@ -139,8 +145,9 @@ const LetsGetStarted = () => {
               >
                 <div
                   className={
-                    "flex justify-center mb-2 text-5xl duration-300 ease-in-out " +
-                    (isHovered3 ? "text-sky-600" : "text-[#595a5c]")
+                    `flex justify-center mb-2 text-3xl lg:text-5xl duration-300 ease-in-out ${
+                      activeComponent === "component3" ? "text-sky-600" : ""
+                    } ` + (isHovered3 ? "text-sky-600" : "text-[#595a5c]")
                   }
                 >
                   <BsCartCheck />
@@ -148,13 +155,14 @@ const LetsGetStarted = () => {
 
                 <h2
                   className={
-                    "text-center text-2xl font-semibold mb-2 duration-500 ease-in-out " +
-                    (isHovered3 ? "text-black" : "text-[#595a5c]")
+                    `text-center text-xl lg:text-2xl font-semibold mb-2 duration-500 ease-in-out ${
+                      activeComponent === "component3" ? "text-black" : ""
+                    } ` + (isHovered3 ? "text-black" : "text-[#595a5c]")
                   }
                 >
                   Place Your Order
                 </h2>
-                <h2 className="text-center text-lg">
+                <h2 className="text-center text-sm lg:text-lg">
                   Get personalized solutions
                 </h2>
               </div>
@@ -169,8 +177,9 @@ const LetsGetStarted = () => {
               >
                 <div
                   className={
-                    "flex justify-center mb-2 text-5xl duration-300 ease-in-out " +
-                    (isHovered4 ? "text-sky-600" : "text-[#595a5c]")
+                    `flex justify-center mb-2 text-3xl lg:text-5xl duration-300 ease-in-out ${
+                      activeComponent === "component4" ? "text-sky-600" : ""
+                    } ` + (isHovered4 ? "text-sky-600" : "text-[#595a5c]")
                   }
                 >
                   <RiFileList2Line />
@@ -178,13 +187,16 @@ const LetsGetStarted = () => {
 
                 <h2
                   className={
-                    "text-center text-2xl font-semibold mb-2 duration-500 ease-in-out " +
-                    (isHovered4 ? "text-black" : "text-[#595a5c]")
+                    `text-center text-xl lg:text-2xl font-semibold mb-2 duration-500 ease-in-out ${
+                      activeComponent === "component4" ? "text-black" : ""
+                    } ` + (isHovered4 ? "text-black" : "text-[#595a5c]")
                   }
                 >
                   Custom Order
                 </h2>
-                <h2 className="text-center text-lg">Make business personal</h2>
+                <h2 className="text-center text-sm lg:text-lg">
+                  Make business personal
+                </h2>
               </div>
             </div>
 
