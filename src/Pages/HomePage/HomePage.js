@@ -11,14 +11,14 @@ import LetsGetStarted from "../../Components/Home/LetsGetStarted/LetsGetStarted"
 const HomePage = () => {
   return (
     <div>
-      <Hero />
+      {/* <Hero />
       <DeliveryService />
       <TrustedCompanies />
-      <ForWhomeWeWork />
+      <ForWhomeWeWork /> */}
       <LetsGetStarted />
-      <PhotoEditingServices />
+      {/* <PhotoEditingServices />
       <WhoWeHelp />
-      <Testimonials />
+      <Testimonials /> */}
     </div>
   );
 };

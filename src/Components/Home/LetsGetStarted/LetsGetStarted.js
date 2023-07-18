@@ -54,7 +54,7 @@ const LetsGetStarted = () => {
 
   return (
     <div>
-      <div>
+      <div className="border border-black">
         <div className="mb-10 mx-4">
           <h2 className="text-4xl font-bold text-center mb-4">
             Let's Get Started...
@@ -70,9 +70,9 @@ const LetsGetStarted = () => {
 
         <div className="flex justify-center pb-20 bg-gradient-to-bl from-cyan-200 from-10% via-white via-30% to-cyan-200 to-90% px-4">
           <div className="flex flex-col xl:flex-row justify-center items-center xl:items-start gap-2 bg-gradient-to-br from-cyan-200 from-10% via-white via-60% to-cyan-200 to-90% py-4 px-4 rounded-xl">
-            <div className="grid grid-cols-2 md:grid-cols-4 xl:flex xl:flex-col xl:w-[250px] bg-gradient-to-tl from-cyan-200 to-white rounded-xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 xl:flex xl:flex-col xl:w-[250px] bg-gradient-to-tl from-cyan-200 to-white xl:rounded-xl">
               <div
-                className={`border-[2px] border-white hover:cursor-pointer rounded-t-xl py-3 px-1 ${
+                className={`border-[2px] border-white hover:cursor-pointer xl:rounded-t-xl py-3 px-1 ${
                   activeComponent === "component1" ? "bg-gray-200" : ""
                 }`}
                 onMouseEnter={handleMouseEnter1}
@@ -168,7 +168,7 @@ const LetsGetStarted = () => {
               </div>
 
               <div
-                className={`border-[2px] border-white rounded-b-xl hover:cursor-pointer py-3 px-1 ${
+                className={`border-[2px] border-white xl:rounded-b-xl hover:cursor-pointer py-3 px-1 ${
                   activeComponent === "component4" ? "bg-gray-200" : ""
                 }`}
                 onMouseEnter={handleMouseEnter4}
@@ -200,7 +200,7 @@ const LetsGetStarted = () => {
               </div>
             </div>
 
-            <div className="w-[800px]">
+            <div className="sm:w-[500px] lg:w-[700px] xl:w-[800px] border border-black">
               {activeComponent === "component1" && <TryUsForFree />}
               {activeComponent === "component2" && <GetAQuote />}
               {activeComponent === "component3" && <PlaceYourOrder />}
