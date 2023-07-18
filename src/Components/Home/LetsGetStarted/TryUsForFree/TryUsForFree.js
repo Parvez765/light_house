@@ -11,6 +11,7 @@ import PhoneInput, {
   formatPhoneNumberIntl,
   isValidPhoneNumber,
 } from "react-phone-number-input";
+import ClickToUpload from "./ClickToUpload";
 
 const TryUsForFree = () => {
   const [value, setValue] = useState();
@@ -102,6 +103,8 @@ const TryUsForFree = () => {
           className="textarea textarea-info border border-gray-400 focus:border-transparent min-h-[80px] w-full mb-5"
           placeholder="Instructions"
         ></textarea>
+
+        <ClickToUpload />
       </div>
     </div>
   );
