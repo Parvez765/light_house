@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import "./NavbarComp1.css";
 import ServicesDropdown from "./ServicesDropdown";
-import "./NavbarComp1.css"
+import "./NavbarComp1.css";
+import NavMobile from "./NavMobile";
 
 const NavbarComp1 = () => {
   return (
@@ -73,6 +74,9 @@ const NavbarComp1 = () => {
           </h2>
         </NavLink>
       </div>
+
+      {/* Navigation bar for mobile responsive */}
+      <NavMobile />
     </div>
   );
 };
