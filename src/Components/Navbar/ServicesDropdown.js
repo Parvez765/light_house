@@ -19,7 +19,8 @@ import {
   GiConverseShoe,
   GiFamilyHouse,
 } from "react-icons/gi";
-import "./ServicesDropdown.css";
+
+import serviceStyle from "./ServicesDropdown.module.css";
 
 const ServicesDropdown = () => {
   const [hoverStates, setHoverStates] = useState([false, false]);
@@ -188,8 +189,10 @@ const ServicesDropdown = () => {
                   </div>
                   <div>
                     {hoverStates[index] && (
-                      <div className="slide-effect">
-                        <h2 className="slideDown ml-[28px] text-[#595a5c] text-sm font-medium">
+                      <div className={serviceStyle.sliderDiv}>
+                        <h2
+                          className={`${serviceStyle.slideDown} ml-[28px] text-[#595a5c] text-sm font-medium`}
+                        >
                           {service.description}
                         </h2>
                       </div>
