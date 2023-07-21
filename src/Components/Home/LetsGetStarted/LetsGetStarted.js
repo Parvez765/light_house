@@ -4,10 +4,11 @@ import { RiFileList2Line } from "react-icons/ri";
 import { BsClipboardCheck, BsCartCheck } from "react-icons/bs";
 
 // Components to load
-import TryUsForFree from "./TryUsForFree/TryUsForFree";
+
 import GetAQuote from "./GetAQuote/GetAQuote";
 import PlaceYourOrder from "./PlaceYourOrder/PlaceYourOrder";
-import CustomOrder from "./CustomOrder//CustomOrder";
+import CustomOrder from "./CustomOrder/CustomOrder";
+import TryUsForFree from "./TryUsForFree/TryUsForFree";
 
 const LetsGetStarted = () => {
   // All State Declaration
