@@ -12,14 +12,6 @@ import {
   FaTshirt,
   FaVectorSquare,
 } from "react-icons/fa";
-
-import NavStyle from "./NavMobile.module.css";
-
-// import component 👇
-import Drawer from "react-modern-drawer";
-
-//import styles 👇
-import "react-modern-drawer/dist/index.css";
 import {
   GiBottleVapors,
   GiConverseShoe,
@@ -28,6 +20,14 @@ import {
   GiSofa,
 } from "react-icons/gi";
 import { LiaGlassesSolid } from "react-icons/lia";
+
+import NavStyle from "./NavMobile.module.css";
+
+// import component 👇
+import Drawer from "react-modern-drawer";
+
+//import styles 👇
+import "react-modern-drawer/dist/index.css";
 
 const services = [
   {
@@ -128,6 +128,26 @@ const NavMobile = () => {
       return updatedStates;
     });
   };
+  // Expand 1
+  const [expanded1, setExpanded1] = useState(false);
+
+  const toggleExpand1 = () => {
+    setExpanded1(!expanded1);
+  };
+
+  // Expand 2
+  const [expanded2, setExpanded2] = useState(false);
+
+  const toggleExpand2 = () => {
+    setExpanded2(!expanded2);
+  };
+
+  // Expand 3
+  const [expanded3, setExpanded3] = useState(false);
+
+  const toggleExpand3 = () => {
+    setExpanded3(!expanded3);
+  };
 
   return (
     <>
@@ -144,7 +164,7 @@ const NavMobile = () => {
         size={400}
         direction="right"
         lockBackgroundScroll={false}
-        className="overflow-y-auto overflow-x-hidden"
+        className={`overflow-y-scroll overflow-x-hidden ${NavStyle.scrollDesign}`}
       >
         <div className="w-full border border-black">
           <div className="flex justify-end mr-8 mt-6">
@@ -166,7 +186,7 @@ const NavMobile = () => {
               <div className="flex flex-col items-center gap-4">
                 <div
                   onClick={toggle1}
-                  className="text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer flex items-center gap-2"
+                  className="text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer flex items-center"
                 >
                   <h2>Services</h2>
 
@@ -179,10 +199,10 @@ const NavMobile = () => {
                   </>
                 </div>
 
-                <div className="flex flex-col">
+                <div className={`flex flex-col ${NavStyle.sliderDiv}`}>
                   <>
                     {open1 && (
-                      <div>
+                      <div className={NavStyle.slideDown}>
                         <div className="mb-10">
                           <h2 className="text-[#595a5c] text-sm text-center font-semibold mb-10 underline underline-offset-4">
                             Photo Editing Services
@@ -279,6 +299,176 @@ const NavMobile = () => {
                       </div>
                     )}
                   </>
+                </div>
+              </div>
+
+              {/* Services Section */}
+              <div className="relative">
+                {/* Service Button */}
+                <div
+                  className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border border-gray-400 px-4 py-4 rounded-r-lg"
+                  onClick={toggleExpand1}
+                >
+                  <h2>Services</h2>
+                  <>
+                    {expanded1 ? (
+                      <MdKeyboardArrowRight className="text-2xl" />
+                    ) : (
+                      <MdKeyboardArrowDown className="text-2xl" />
+                    )}
+                  </>
+                </div>
+
+                <div
+                  className={`${NavStyle.navigationContent} ${
+                    expanded1 ? NavStyle.expanded : ""
+                  }`}
+                >
+                  {/* Photo Editing Service Button */}
+                  <div className="relative">
+                    <div
+                      className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border border-gray-400 ml-4 px-4 py-4 rounded-r-lg"
+                      onClick={toggleExpand2}
+                    >
+                      <h2>Photo Editing Service</h2>
+                      <>
+                        {expanded2 ? (
+                          <MdKeyboardArrowRight className="text-2xl" />
+                        ) : (
+                          <MdKeyboardArrowDown className="text-2xl" />
+                        )}
+                      </>
+                    </div>
+
+                    <div
+                      className={` ${NavStyle.navigationContent} ${
+                        expanded2 ? NavStyle.expanded : ""
+                      }`}
+                    >
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                        <FaCrop className="text-[#595a5c] text-xl" />
+
+                        <div className="flex flex-col gap-1">
+                          <h2 className="text-base font-bold">
+                            Multi Clipping Path
+                          </h2>
+                          <h2 className="text-sm text-[#595a5c] font-medium">
+                            Your Offshore Post Production Team
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                        <FaPenNib className="text-[#595a5c] text-xl" />
+
+                        <div className="flex flex-col gap-1">
+                          <h2 className="text-base font-bold">Clipping Path</h2>
+                          <h2 className="text-sm text-[#595a5c] font-medium">
+                            Stand Out From The Competition
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                        <FaTshirt className="text-[#595a5c] text-xl" />
+
+                        <div className="flex flex-col gap-1">
+                          <h2 className="text-base font-bold">
+                            Invisible Mannequin
+                          </h2>
+                          <h2 className="text-sm text-[#595a5c] font-medium">
+                            When less becomes more
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                        <FaVectorSquare className="text-[#595a5c] text-xl" />
+
+                        <div className="flex flex-col gap-1">
+                          <h2 className="text-base font-bold">
+                            Vector Conversion
+                          </h2>
+                          <h2 className="text-sm text-[#595a5c] font-medium">
+                            Everything made simpler!
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* High-end Retouching Services */}
+                  <div className="relative">
+                    <div
+                      className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border border-gray-400 ml-4 px-4 py-4 rounded-r-lg"
+                      onClick={toggleExpand3}
+                    >
+                      <h2>High-end Retouching Service</h2>
+                      <>
+                        {expanded3 ? (
+                          <MdKeyboardArrowRight className="text-2xl" />
+                        ) : (
+                          <MdKeyboardArrowDown className="text-2xl" />
+                        )}
+                      </>
+                    </div>
+
+                    <div
+                      className={` ${NavStyle.navigationContent} ${
+                        expanded3 ? NavStyle.expanded : ""
+                      }`}
+                    >
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                        <FaCrop className="text-[#595a5c] text-xl" />
+
+                        <div className="flex flex-col gap-1">
+                          <h2 className="text-base font-bold">
+                            Multi Clipping Path
+                          </h2>
+                          <h2 className="text-sm text-[#595a5c] font-medium">
+                            Your Offshore Post Production Team
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                        <FaPenNib className="text-[#595a5c] text-xl" />
+
+                        <div className="flex flex-col gap-1">
+                          <h2 className="text-base font-bold">Clipping Path</h2>
+                          <h2 className="text-sm text-[#595a5c] font-medium">
+                            Stand Out From The Competition
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                        <FaTshirt className="text-[#595a5c] text-xl" />
+
+                        <div className="flex flex-col gap-1">
+                          <h2 className="text-base font-bold">
+                            Invisible Mannequin
+                          </h2>
+                          <h2 className="text-sm text-[#595a5c] font-medium">
+                            When less becomes more
+                          </h2>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                        <FaVectorSquare className="text-[#595a5c] text-xl" />
+
+                        <div className="flex flex-col gap-1">
+                          <h2 className="text-base font-bold">
+                            Vector Conversion
+                          </h2>
+                          <h2 className="text-sm text-[#595a5c] font-medium">
+                            Everything made simpler!
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

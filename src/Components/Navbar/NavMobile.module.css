@@ -1,3 +1,52 @@
+/* To have transparent scrollbar inside the drawer */
+
+.scrollDesign::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.scrollDesign::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.scrollDesign::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* To have smooth slide down div when a button is pressed */
+
+/* .navigationContainer {
+  position: relative;
+} */
+
+/* .navigationHeader {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-weight: bold;
+} */
+
+.navigationContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out; /* Increase the duration to slow down */
+}
+
+.expanded {
+  max-height: 1200px; /* Set the maximum height as per your requirement */
+  transition: max-height 0.5s ease-in-out; /* Adjust the duration here as well */
+}
+
+/* .navigationItem {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  text-align: center;
+} */
+
+/* To have slide down text when hover on something */
+
 .sliderDiv {
   position: relative;
   overflow: hidden;
