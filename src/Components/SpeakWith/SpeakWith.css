@@ -1,0 +1,8 @@
+.contactContainer{
+    background: linear-gradient(rgb(198, 242, 255), rgb(242, 250, 255));
+    padding: 40px;
+}
+.informationContainer{
+    background: linear-gradient(rgb(244, 252, 255), rgb(182, 227, 255));
+    box-shadow: 6px 0px 4px 0px rgba(15, 15, 15, 0.6);
+}

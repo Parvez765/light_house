@@ -29,7 +29,7 @@ const cardData = [
         <div className='container mx-auto'>
             <div className="mb-14">
                 <div className="mb-24 mx-4">
-                    <div className='grid justify-center items-center grid-cols-1 lg:grid-cols-2'>
+                    <div className='grid justify-items-center items-center grid-cols-1 lg:grid-cols-2'>
                         <div>
                             <h1 className='text-[50px] font-bold leading-[50px]'>We Serve 4000+ Business and Photo Edits 10000+ Images Daily</h1>
                             <p className='mt-[12px] text-[20px]'>With our growing expert team, scaling to meet your photo processing needs is easy!With our growing expert team, scaling to meet your photo processing needs is easy</p>
