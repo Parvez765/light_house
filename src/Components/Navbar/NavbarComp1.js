@@ -60,16 +60,14 @@ const NavbarComp1 = () => {
           to="/login"
           className="hover:bg-sky-600 hover:text-white border border-gray-400 hover:border-transparent rounded-lg duration-300 ease-in-out"
         >
-          <h2 className="text-lg xl:text-xl font-semibold py-1.5 px-4">
-            Login
-          </h2>
+          <h2 className="text-lg xl:text-xl font-semibold py-2 px-4">Login</h2>
         </NavLink>
 
         <NavLink
           to="/get_started"
           className="text-white bg-sky-700 hover:bg-sky-600 rounded-lg duration-300 ease-in-out"
         >
-          <h2 className="text-lg xl:text-xl font-semibold py-1.5 px-4">
+          <h2 className="text-lg xl:text-xl font-semibold py-2 px-4">
             Get Started
           </h2>
         </NavLink>

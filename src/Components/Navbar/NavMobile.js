@@ -149,7 +149,7 @@ const NavMobile = () => {
   };
 
   return (
-    <>
+    <div className="block lg:hidden">
       <button
         onClick={toggleDrawer}
         className="text-4xl font-bold hover:text-gray-400 ease-in-out duration-300 w-[40px] flex justify-center items-center hover:border-r-4 hover:border-black"
@@ -165,7 +165,7 @@ const NavMobile = () => {
         lockBackgroundScroll={false}
         className={`overflow-y-scroll overflow-x-hidden ${NavStyle.scrollDesign}`}
       >
-        <div className="w-full">
+        <div className="w-full mt-10 mb-20">
           <div className="flex justify-end mr-8 mt-6">
             <ImCross
               onClick={() => setIsOpen(false)}
@@ -173,8 +173,8 @@ const NavMobile = () => {
             />
           </div>
 
-          <div className="w-full mt-20 mb-6 px-4 border border-black">
-            <div className="flex flex-col text-lg font-semibold gap-4 w-full h-full">
+          <div className="w-full mt-20 mb-6 px-4">
+            <div className="flex flex-col items-start text-lg font-semibold gap-3 w-full h-full">
               <Link
                 to="/how_it_works"
                 className="text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out px-4 py-4"
@@ -183,7 +183,7 @@ const NavMobile = () => {
               </Link>
 
               {/* Services Section */}
-              <div className="relative">
+              <div className="relative w-full">
                 {/* Service Button */}
                 <div
                   className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border-b-2 border-gray-400 px-4 py-4"
@@ -331,7 +331,7 @@ const NavMobile = () => {
               </div>
 
               {/* Company Section */}
-              <div className="relative">
+              <div className="relative w-full">
                 <div
                   className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border-b-2 border-gray-400 px-4 py-4"
                   onClick={toggleCompany1}
@@ -353,11 +353,27 @@ const NavMobile = () => {
               >
                 Pricing
               </Link>
+
+              <Link
+                to="/get_quote"
+                className="text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out px-4 py-4"
+              >
+                Get a quote
+              </Link>
             </div>
+          </div>
+
+          <div className="flex justify-center items-center gap-4 px-4 mt-20">
+            <h2 className="border border-gray-400 hover:border-transparent text-black hover:text-white hover:bg-sky-600 hover:cursor-pointer rounded-md text-center text-xl font-bold duration-300 ease-in-out px-4 py-3 w-full">
+              Login
+            </h2>
+            <h2 className="rounded-md text-center text-xl font-bold duration-300 ease-in-out px-4 py-3 w-full bg-sky-600 hover:bg-sky-500 hover:cursor-pointer text-white">
+              Get Started
+            </h2>
           </div>
         </div>
       </Drawer>
-    </>
+    </div>
   );
 };
 
