@@ -34,7 +34,7 @@
 }
 
 .expanded {
-  max-height: 1200px; /* Set the maximum height as per your requirement */
+  max-height: 1500px; /* Set the maximum height as per your requirement */
   transition: max-height 0.5s ease-in-out; /* Adjust the duration here as well */
 }
 

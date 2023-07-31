@@ -93,24 +93,14 @@ const services = [
 ];
 
 const NavMobile = () => {
-  // ----It is the state to open the sidebar----
+  // ----It is the state to open and close the sidebar----
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
 
-  // -----It is the state to expand the menu components-----
-  const [open1, setOpen1] = useState(false);
-  const toggle1 = () => {
-    setOpen1(!open1);
-  };
-
-  const [open2, setOpen2] = useState(false);
-  const toggle2 = () => {
-    setOpen2(!open2);
-  };
-
+  // It is the state for slide-down text effect on div
   const [hoverStates, setHoverStates] = useState([false, false]);
 
   const handleMouseOver = (index) => {
@@ -128,25 +118,34 @@ const NavMobile = () => {
       return updatedStates;
     });
   };
-  // Expand 1
-  const [expanded1, setExpanded1] = useState(false);
 
-  const toggleExpand1 = () => {
-    setExpanded1(!expanded1);
+  // -----It is the state to expand the menu components-----
+  // Service Expand 1
+  const [serviceExpand1, setServiceExpand1] = useState(false);
+
+  const toggleService1 = () => {
+    setServiceExpand1(!serviceExpand1);
   };
 
-  // Expand 2
-  const [expanded2, setExpanded2] = useState(false);
+  // Service Expand 2
+  const [serviceExpand2, setServiceExpand2] = useState(false);
 
-  const toggleExpand2 = () => {
-    setExpanded2(!expanded2);
+  const toggleService2 = () => {
+    setServiceExpand2(!serviceExpand2);
   };
 
-  // Expand 3
-  const [expanded3, setExpanded3] = useState(false);
+  // Service Expand 3
+  const [serviceExpand3, setServiceExpand3] = useState(false);
 
-  const toggleExpand3 = () => {
-    setExpanded3(!expanded3);
+  const toggleService3 = () => {
+    setServiceExpand3(!serviceExpand3);
+  };
+
+  // Company Expand 1
+  const [companyExpand1, setCompanyExpand1] = useState(false);
+
+  const toggleCompany1 = () => {
+    setCompanyExpand1(!companyExpand1);
   };
 
   return (
@@ -166,7 +165,7 @@ const NavMobile = () => {
         lockBackgroundScroll={false}
         className={`overflow-y-scroll overflow-x-hidden ${NavStyle.scrollDesign}`}
       >
-        <div className="w-full border border-black">
+        <div className="w-full">
           <div className="flex justify-end mr-8 mt-6">
             <ImCross
               onClick={() => setIsOpen(false)}
@@ -174,144 +173,25 @@ const NavMobile = () => {
             />
           </div>
 
-          <div className="w-full my-10">
-            <div className="flex flex-col items-center text-lg font-semibold gap-6 w-full h-full">
+          <div className="w-full mt-20 mb-6 px-4 border border-black">
+            <div className="flex flex-col text-lg font-semibold gap-4 w-full h-full">
               <Link
                 to="/how_it_works"
-                className="text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out"
+                className="text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out px-4 py-4"
               >
                 How It Works
               </Link>
-
-              <div className="flex flex-col items-center gap-4">
-                <div
-                  onClick={toggle1}
-                  className="text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer flex items-center"
-                >
-                  <h2>Services</h2>
-
-                  <>
-                    {!open1 ? (
-                      <MdKeyboardArrowRight className="text-2xl" />
-                    ) : (
-                      <MdKeyboardArrowDown className="text-2xl" />
-                    )}
-                  </>
-                </div>
-
-                <div className={`flex flex-col ${NavStyle.sliderDiv}`}>
-                  <>
-                    {open1 && (
-                      <div className={NavStyle.slideDown}>
-                        <div className="mb-10">
-                          <h2 className="text-[#595a5c] text-sm text-center font-semibold mb-10 underline underline-offset-4">
-                            Photo Editing Services
-                          </h2>
-
-                          <div className="flex flex-col items-center gap-2 mb-4 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out">
-                            <FaCrop className="text-[#595a5c] text-xl" />
-
-                            <div className="flex flex-col items-center">
-                              <h2 className="text-base font-bold">
-                                Multi Clipping Path
-                              </h2>
-                              <h2 className="text-sm text-[#595a5c] font-medium">
-                                Your Offshore Post Production Team
-                              </h2>
-                            </div>
-                          </div>
-
-                          <div className="flex flex-col items-center gap-2 mb-4 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out">
-                            <FaPenNib className="text-[#595a5c] text-xl" />
-
-                            <div className="flex flex-col items-center">
-                              <h2 className="text-base font-bold">
-                                Clipping Path
-                              </h2>
-                              <h2 className="text-sm text-[#595a5c] font-medium">
-                                Stand Out From The Competition
-                              </h2>
-                            </div>
-                          </div>
-
-                          <div className="flex flex-col items-center gap-2 mb-4 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out">
-                            <FaTshirt className="text-[#595a5c] text-xl" />
-
-                            <div className="flex flex-col items-center">
-                              <h2 className="text-base font-bold">
-                                Invisible Mannequin
-                              </h2>
-                              <h2 className="text-sm text-[#595a5c] font-medium">
-                                When less becomes more
-                              </h2>
-                            </div>
-                          </div>
-
-                          <div className="flex flex-col items-center gap-2 mb-4 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out">
-                            <FaVectorSquare className="text-[#595a5c] text-xl" />
-
-                            <div className="flex flex-col items-center">
-                              <h2 className="text-base font-bold">
-                                Vector Conversion
-                              </h2>
-                              <h2 className="text-sm text-[#595a5c] font-medium">
-                                Everything made simpler!
-                              </h2>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div>
-                          <h2 className="text-[#595a5c] text-sm text-center font-semibold mb-10 underline underline-offset-4">
-                            High-end Retouching Services
-                          </h2>
-
-                          <div className="">
-                            <div className="flex flex-col items-center gap-2">
-                              {services.map((service, index) => (
-                                <div className="h-[80px] w-[250px]" key={index}>
-                                  <div
-                                    className="flex flex-col items-center gap-2 hover:cursor-pointer duration-300 ease-in-out hover:text-sky-600"
-                                    onMouseOver={() => handleMouseOver(index)}
-                                    onMouseOut={() => handleMouseOut(index)}
-                                  >
-                                    {service.icon}
-                                    <h2 className="text-base font-bold">
-                                      {service.title}
-                                    </h2>
-                                  </div>
-                                  <div>
-                                    {hoverStates[index] && (
-                                      <div className={NavStyle.sliderDiv}>
-                                        <h2
-                                          className={`${NavStyle.slideDown} text-center text-[#595a5c] text-sm font-medium break-all`}
-                                        >
-                                          {service.description}
-                                        </h2>
-                                      </div>
-                                    )}
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </>
-                </div>
-              </div>
 
               {/* Services Section */}
               <div className="relative">
                 {/* Service Button */}
                 <div
                   className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border-b-2 border-gray-400 px-4 py-4"
-                  onClick={toggleExpand1}
+                  onClick={toggleService1}
                 >
                   <h2>Services</h2>
                   <>
-                    {expanded1 ? (
+                    {serviceExpand1 ? (
                       <MdKeyboardArrowRight className="text-2xl" />
                     ) : (
                       <MdKeyboardArrowDown className="text-2xl" />
@@ -321,18 +201,18 @@ const NavMobile = () => {
 
                 <div
                   className={`${NavStyle.navigationContent} ${
-                    expanded1 ? NavStyle.expanded : ""
+                    serviceExpand1 ? NavStyle.expanded : ""
                   }`}
                 >
                   {/* Photo Editing Service Button */}
                   <div className="relative">
                     <div
                       className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border-b-2 border-gray-400 ml-4 px-4 py-4"
-                      onClick={toggleExpand2}
+                      onClick={toggleService2}
                     >
                       <h2>Photo Editing Service</h2>
                       <>
-                        {expanded2 ? (
+                        {serviceExpand2 ? (
                           <MdKeyboardArrowRight className="text-2xl" />
                         ) : (
                           <MdKeyboardArrowDown className="text-2xl" />
@@ -342,7 +222,7 @@ const NavMobile = () => {
 
                     <div
                       className={` ${NavStyle.navigationContent} ${
-                        expanded2 ? NavStyle.expanded : ""
+                        serviceExpand2 ? NavStyle.expanded : ""
                       }`}
                     >
                       <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border-r-2 border-transparent hover:border-gray-400 ml-10 px-4 py-4">
@@ -401,11 +281,11 @@ const NavMobile = () => {
                   <div className="relative">
                     <div
                       className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border-b-2 border-gray-400 ml-4 px-4 py-4"
-                      onClick={toggleExpand3}
+                      onClick={toggleService3}
                     >
                       <h2>High-end Retouching Service</h2>
                       <>
-                        {expanded3 ? (
+                        {serviceExpand3 ? (
                           <MdKeyboardArrowRight className="text-2xl" />
                         ) : (
                           <MdKeyboardArrowDown className="text-2xl" />
@@ -414,63 +294,65 @@ const NavMobile = () => {
                     </div>
 
                     <div
-                      className={` ${NavStyle.navigationContent} ${
-                        expanded3 ? NavStyle.expanded : ""
+                      className={`mt-4 ${NavStyle.navigationContent} ${
+                        serviceExpand3 ? NavStyle.expanded : ""
                       }`}
                     >
-                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border-r-2 border-transparent hover:border-gray-400 ml-10 px-4 py-4">
-                        <FaCrop className="text-[#595a5c] text-xl" />
+                      {services.map((service, index) => (
+                        <div
+                          className="h-[60px] ml-14 duration-300 ease-in-out hover:cursor-pointer border-r-2 border-transparent hover:border-gray-400"
+                          onMouseOver={() => handleMouseOver(index)}
+                          onMouseOut={() => handleMouseOut(index)}
+                          key={index}
+                        >
+                          <div className="flex items-center gap-2 hover:cursor-pointer duration-300 ease-in-out hover:text-sky-600">
+                            {service.icon}
+                            <h2 className="text-base font-bold">
+                              {service.title}
+                            </h2>
+                          </div>
 
-                        <div className="flex flex-col gap-1">
-                          <h2 className="text-base font-bold">
-                            Multi Clipping Path
-                          </h2>
-                          <h2 className="text-sm text-[#595a5c] font-medium">
-                            Your Offshore Post Production Team
-                          </h2>
+                          <div>
+                            {hoverStates[index] && (
+                              <div className={NavStyle.sliderDiv}>
+                                <h2
+                                  className={`${NavStyle.slideDown} ml-[28px] text-[#595a5c] text-sm font-medium break-all`}
+                                >
+                                  {service.description}
+                                </h2>
+                              </div>
+                            )}
+                          </div>
                         </div>
-                      </div>
-
-                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
-                        <FaPenNib className="text-[#595a5c] text-xl" />
-
-                        <div className="flex flex-col gap-1">
-                          <h2 className="text-base font-bold">Clipping Path</h2>
-                          <h2 className="text-sm text-[#595a5c] font-medium">
-                            Stand Out From The Competition
-                          </h2>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
-                        <FaTshirt className="text-[#595a5c] text-xl" />
-
-                        <div className="flex flex-col gap-1">
-                          <h2 className="text-base font-bold">
-                            Invisible Mannequin
-                          </h2>
-                          <h2 className="text-sm text-[#595a5c] font-medium">
-                            When less becomes more
-                          </h2>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
-                        <FaVectorSquare className="text-[#595a5c] text-xl" />
-
-                        <div className="flex flex-col gap-1">
-                          <h2 className="text-base font-bold">
-                            Vector Conversion
-                          </h2>
-                          <h2 className="text-sm text-[#595a5c] font-medium">
-                            Everything made simpler!
-                          </h2>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
               </div>
+
+              {/* Company Section */}
+              <div className="relative">
+                <div
+                  className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border-b-2 border-gray-400 px-4 py-4"
+                  onClick={toggleCompany1}
+                >
+                  <h2>Company</h2>
+                  <>
+                    {companyExpand1 ? (
+                      <MdKeyboardArrowRight className="text-2xl" />
+                    ) : (
+                      <MdKeyboardArrowDown className="text-2xl" />
+                    )}
+                  </>
+                </div>
+              </div>
+
+              <Link
+                to="/pricing"
+                className="text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out px-4 py-4"
+              >
+                Pricing
+              </Link>
             </div>
           </div>
         </div>
