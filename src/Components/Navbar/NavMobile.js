@@ -170,7 +170,7 @@ const NavMobile = () => {
           <div className="flex justify-end mr-8 mt-6">
             <ImCross
               onClick={() => setIsOpen(false)}
-              className="text-3xl font-bold hover:text-gray-400 ease-in-out duration-300"
+              className="text-3xl font-bold hover:text-gray-400 ease-in-out duration-300 hover:cursor-pointer"
             />
           </div>
 
@@ -306,7 +306,7 @@ const NavMobile = () => {
               <div className="relative">
                 {/* Service Button */}
                 <div
-                  className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border border-gray-400 px-4 py-4 rounded-r-lg"
+                  className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border-b-2 border-gray-400 px-4 py-4"
                   onClick={toggleExpand1}
                 >
                   <h2>Services</h2>
@@ -327,7 +327,7 @@ const NavMobile = () => {
                   {/* Photo Editing Service Button */}
                   <div className="relative">
                     <div
-                      className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border border-gray-400 ml-4 px-4 py-4 rounded-r-lg"
+                      className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border-b-2 border-gray-400 ml-4 px-4 py-4"
                       onClick={toggleExpand2}
                     >
                       <h2>Photo Editing Service</h2>
@@ -345,7 +345,7 @@ const NavMobile = () => {
                         expanded2 ? NavStyle.expanded : ""
                       }`}
                     >
-                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border-r-2 border-transparent hover:border-gray-400 ml-10 px-4 py-4">
                         <FaCrop className="text-[#595a5c] text-xl" />
 
                         <div className="flex flex-col gap-1">
@@ -358,7 +358,7 @@ const NavMobile = () => {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border-r-2 border-transparent hover:border-gray-400 ml-10 px-4 py-4">
                         <FaPenNib className="text-[#595a5c] text-xl" />
 
                         <div className="flex flex-col gap-1">
@@ -369,7 +369,7 @@ const NavMobile = () => {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border-r-2 border-transparent hover:border-gray-400 ml-10 px-4 py-4">
                         <FaTshirt className="text-[#595a5c] text-xl" />
 
                         <div className="flex flex-col gap-1">
@@ -382,7 +382,7 @@ const NavMobile = () => {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border-r-2 border-transparent hover:border-gray-400 ml-10 px-4 py-4">
                         <FaVectorSquare className="text-[#595a5c] text-xl" />
 
                         <div className="flex flex-col gap-1">
@@ -400,7 +400,7 @@ const NavMobile = () => {
                   {/* High-end Retouching Services */}
                   <div className="relative">
                     <div
-                      className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border border-gray-400 ml-4 px-4 py-4 rounded-r-lg"
+                      className="flex justify-between items-center text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer border-b-2 border-gray-400 ml-4 px-4 py-4"
                       onClick={toggleExpand3}
                     >
                       <h2>High-end Retouching Service</h2>
@@ -418,7 +418,7 @@ const NavMobile = () => {
                         expanded3 ? NavStyle.expanded : ""
                       }`}
                     >
-                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border border-gray-400 ml-10 px-4 py-4 rounded-r-lg">
+                      <div className="flex items-center gap-2 hover:text-sky-600 hover:cursor-pointer duration-300 ease-in-out border-r-2 border-transparent hover:border-gray-400 ml-10 px-4 py-4">
                         <FaCrop className="text-[#595a5c] text-xl" />
 
                         <div className="flex flex-col gap-1">
