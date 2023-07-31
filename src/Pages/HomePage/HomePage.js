@@ -8,6 +8,7 @@ import ForWhomeWeWork from "../../Components/Home/ForWhomeWeWork/ForWhomeWeWork"
 import Testimonials from "../../Components/Home/Testimonials/Testimonials";
 import WeServe from "../../Components/WeServe/WeServe";
 import SpeakWith from "../../Components/SpeakWith/SpeakWith";
+import FAQ from "../../Components/FAQ/FAQ";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
       <WeServe/>
       <WhoWeHelp />
       <Testimonials />
+      <FAQ/>
       <SpeakWith/>
     </div>
   );
