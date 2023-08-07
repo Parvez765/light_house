@@ -27,7 +27,7 @@ const cardData = [
 ]
     return (
         <div className='container mx-auto'>
-            <div className="mb-14">
+            <div className="mb-14 mt-14">
                 <div className="mb-24 mx-4">
                     <div className='grid justify-items-center items-center grid-cols-1 lg:grid-cols-2'>
                         <div>

@@ -9,6 +9,7 @@ import Testimonials from "../../Components/Home/Testimonials/Testimonials";
 import WeServe from "../../Components/WeServe/WeServe";
 import SpeakWith from "../../Components/SpeakWith/SpeakWith";
 import FAQ from "../../Components/FAQ/FAQ";
+import Pricing from "../../Components/Pricing/Pricing";
 
 const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ const HomePage = () => {
       <TrustedCompanies />
       <ForWhomeWeWork/>
       <PhotoEditingServices />
+      <Pricing/>
       <WeServe/>
       <WhoWeHelp />
       <Testimonials />

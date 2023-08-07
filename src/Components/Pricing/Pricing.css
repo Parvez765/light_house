@@ -1,0 +1,52 @@
+.pricingContainer{
+   background: linear-gradient(rgb(254, 254, 255), rgb(236, 255, 236));
+   padding: 20px;
+}
+.priceActiveBtn{
+   background-color: rgb(76, 76, 255);
+   padding: 10px 20px;
+   color: white;
+   font-weight: 700;
+   border-radius: 10px;
+}
+.priceBtn{
+   background-color: rgb(3, 181, 246);
+   padding: 10px 20px;
+   color: white;
+   font-weight: 700;
+   border-radius: 10px;
+}
+.pricingContentContainer{
+   background-color: rgb(240, 240, 255);
+   /* height: 100vh; */
+   display: block;
+   margin: 40px auto;
+   border-radius: 12px;
+   padding: 30px;
+   
+}
+.activeBtn{
+   background-color: rgb(76, 76, 255);
+   padding: 12px;
+   color: white;
+   font-weight: 700;
+   border-radius: 10px;
+}
+.defaultBtn{
+   background-color: rgb(3, 181, 246);
+   padding: 12px;
+   color: white;
+   font-weight: 700;
+   border-radius: 10px;
+}
+.additionalServiceContainer{
+   background-color: rgb(222, 239, 255);
+   padding: 10px;
+   border-radius: 12px;
+}
+.pricingCalculator{
+   background-color: rgb(228, 246, 255);
+   border-radius: 10px;
+   text-align: center;
+   padding: 30px;
+}
