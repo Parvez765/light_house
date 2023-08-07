@@ -11,18 +11,66 @@ import margin from "../../Assets/pricing/margin.png"
 import adjustment from "../../Assets/pricing/adjustment.png"
 import retouch from "../../Assets/pricing/retouch.png"
 import checkMark from "../../Assets/pricing/checkbox.png"
-import minus from "../../Assets/pricing/minus.png"
-import plus from "../../Assets/pricing/plus.png"
+import flatRate from "../../Assets/pricing/flatRate.png"
+import medium from "../../Assets/pricing/medium.png"
+import superComplex from "../../Assets/pricing/superComplex.png"
+import complex from "../../Assets/pricing/complex.png"
+import checkBoxRight from "../../Assets/pricing/checkBoxRight.png"
+// import photoRetouching from "../../Assets/pricing/photoRetouching.png"
+// import checkBoxRound from "../../Assets/pricing/_Checkbox_round.png"
+import { FaPlus, FaMinus } from "react-icons/fa";
+import Swal from 'sweetalert2';
 
 const Pricing = () => {
 
-    const [activeBtn, setActiveBtn] = useState("clippingPath");
-    const [active, setActive] = useState(false)
+    const [activeBtn, setActiveBtn] = useState("Clipping Path");
+    const [add, setAdd] = useState(1)
+    const [value, setValue] = useState(3)
+    const [service, setService] = useState("Basic")
+    const [right, setRight] = useState(true)
+    const [rightTwo, setRightTwo] = useState(true)
+    const [rightThree, setRightThree] = useState(true)
+    const [rightFour, setRightFour] = useState(true)
+
+
 
     const handleClick = (btn) => {
         setActiveBtn(btn);
     };
 
+    const handleServiceClick = (btn) => {
+        setService(btn);
+    };
+
+    const handleMinus = () => {
+        if (add < 2) {
+            return Swal.fire(
+                'Opps!',
+                'Value Can Not Be Less Than One!',
+                'Error'
+            )
+        } else {
+            return setAdd(add - 1)
+        }
+    }
+
+    const handleRight = () => {
+        setRight(!right)
+    }
+
+    const handleRightTwo = () => {
+        setRightTwo(!rightTwo)
+    }
+    const handleRightThree = () => {
+        setRightThree(!rightThree)
+    }
+
+    const handleRightFour = () => {
+        setRightFour(!rightFour)
+    }
+
+
+    // console.log(minusBtn);
 
     return (
         <div className='pricingContainer'>
@@ -31,21 +79,27 @@ const Pricing = () => {
                 <p className='text-center -mt-[10px] font-medium'>Introducing a simpler and economical way to get <br /> the best photo editing solutions for Pro-photographers, Fashion, Apparel,</p>
             </div>
             <div className='flex items-center justify-center mt-6 gap-4'>
-                <button onClick={() => handleClick('clippingPath')} className={activeBtn === 'clippingPath' ? "priceActiveBtn" : "priceBtn"} >Clipping Path</button>
-                <button onClick={() => handleClick('photoRetouching')} className={activeBtn === 'photoRetouching' ? "priceActiveBtn" : "priceBtn"} >Photo Retouching</button>
-                <button onClick={() => handleClick('ghostMannequin')} className={activeBtn === 'ghostMannequin' ? "priceActiveBtn" : "priceBtn"} >Ghost Mannequin</button>
-                <button onClick={() => handleClick('imageMasking')} className={activeBtn === 'imageMasking' ? "priceActiveBtn" : "priceBtn"} >Image Masking</button>
+                <button onClick={() => handleClick('Clipping Path')} className={activeBtn === 'Clipping Path' ? "priceActiveBtn" : "priceBtn"} >Clipping Path</button>
+                <button onClick={() => handleClick('Photo Retouching')} className={activeBtn === 'Photo Retouching' ? "priceActiveBtn" : "priceBtn"} >Photo Retouching</button>
+                <button onClick={() => handleClick('Ghost Mannequin')} className={activeBtn === 'Ghost Mannequin' ? "priceActiveBtn" : "priceBtn"} >Ghost Mannequin</button>
+                <button onClick={() => handleClick('Image Masking')} className={activeBtn === 'Image Masking' ? "priceActiveBtn" : "priceBtn"} >Image Masking</button>
             </div>
             <div className='pricingContentContainer 2xl:w-[1200px]'>
                 <div className='grid lg:grid-cols-2 gap-[50px]'>
                     <div>
-                        <img src={basicImage} alt="Light House Basic" />
+                        {service === "Basic" && <img src={basicImage} alt="Light House Basic" />}
+                        {service === "Flat Rate" && <img src={flatRate} alt="Light House Flat Rate" />}
+                        {service === "Medium" && <img src={medium} alt="Light House Medium" />}
+                        {service === "Complex" && <img src={complex} alt="Light House Complex" />}
+                        {service === "Super Complex" && <img src={superComplex} alt="Light House Super Complex" />}
+
+
                         <div className='mt-[10px] flex gap-4'>
-                            <button className='activeBtn'>Basic</button>
-                            <button className='defaultBtn'>Flat Rate</button>
-                            <button className='defaultBtn'>Medium</button>
-                            <button className='defaultBtn'>Complex</button>
-                            <button className='defaultBtn'>Super Complex</button>
+                            <button onClick={() => handleServiceClick('Basic')} className={service === 'Basic' ? "activeBtn" : "defaultBtn"}>Basic</button>
+                            <button onClick={() => handleServiceClick('Flat Rate')} className={service === 'Flat Rate' ? "activeBtn" : "defaultBtn"}>Flat Rate</button>
+                            <button onClick={() => handleServiceClick('Medium')} className={service === 'Medium' ? "activeBtn" : "defaultBtn"}>Medium</button>
+                            <button onClick={() => handleServiceClick('Complex')} className={service === 'Complex' ? "activeBtn" : "defaultBtn"}>Complex</button>
+                            <button onClick={() => handleServiceClick('Super Complex')} className={service === 'Super Complex' ? "activeBtn" : "defaultBtn"}>Super Complex</button>
                         </div>
                         <div className='mt-[16px]'>
                             <h6>Select Any of Four Services</h6>
@@ -65,7 +119,9 @@ const Pricing = () => {
                                                         <p>(+$0.5 per image)</p>
                                                     </div>
                                                 </div>
-                                                <img src={checkBox} alt="LightHouse CheckBox" />
+                                                <div>
+                                                    <img src={checkBox} alt="LightHouse CheckBox" />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +135,7 @@ const Pricing = () => {
                                                         </figure>
                                                     </div>
                                                     <div>
-                                                        <p className='font-medium'>Drop Shadow</p>
+                                                        <p className='font-medium'>Reflection</p>
                                                         <p>(+$0.5 per image)</p>
                                                     </div>
                                                 </div>
@@ -99,7 +155,7 @@ const Pricing = () => {
                                                         </figure>
                                                     </div>
                                                     <div>
-                                                        <p className='font-medium'>Drop Shadow</p>
+                                                        <p className='font-medium'>Custom Shadow</p>
                                                         <p>(+$0.5 per image)</p>
                                                     </div>
                                                 </div>
@@ -117,7 +173,7 @@ const Pricing = () => {
                                                         </figure>
                                                     </div>
                                                     <div>
-                                                        <p className='font-medium'>Drop Shadow</p>
+                                                        <p className='font-medium'>Keep Shadow</p>
                                                         <p>(+$0.5 per image)</p>
                                                     </div>
                                                 </div>
@@ -146,7 +202,11 @@ const Pricing = () => {
                                                         <p>(+$0.5 per image)</p>
                                                     </div>
                                                 </div>
-                                                <img src={checkMark} alt="LightHouse CheckBox" />
+                                                <div onClick={handleRight}>
+                                                    {
+                                                        right ? <img src={checkMark} alt="LightHouse CheckBox" /> : <img src={checkBoxRight} alt="LightHouse CheckBox" />
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -164,7 +224,11 @@ const Pricing = () => {
                                                         <p>(+$0.5 per image)</p>
                                                     </div>
                                                 </div>
-                                                <img src={checkMark} alt="LightHouse CheckBox" />
+                                                <div onClick={handleRightTwo}>
+                                                    {
+                                                        rightTwo ? <img src={checkMark} alt="LightHouse CheckBox" /> : <img src={checkBoxRight} alt="LightHouse CheckBox" />
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -184,7 +248,11 @@ const Pricing = () => {
                                                         <p>(+$0.5 per image)</p>
                                                     </div>
                                                 </div>
-                                                <img src={checkMark} alt="LightHouse CheckBox" />
+                                                <div onClick={handleRightThree}>
+                                                    {
+                                                        rightThree ? <img src={checkMark} alt="LightHouse CheckBox" /> : <img src={checkBoxRight} alt="LightHouse CheckBox" />
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -202,7 +270,11 @@ const Pricing = () => {
                                                         <p>(+$0.5 per image)</p>
                                                     </div>
                                                 </div>
-                                                <img src={checkMark} alt="LightHouse CheckBox" />
+                                                <div onClick={handleRightFour}>
+                                                    {
+                                                        rightFour ? <img src={checkMark} alt="LightHouse CheckBox" /> : <img src={checkBoxRight} alt="LightHouse CheckBox" />
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -211,27 +283,38 @@ const Pricing = () => {
                         </div>
                     </div>
                     <div className='pricingCalculator'>
-                        <h6 className='font-medium text-[20px]'>Clipping Path</h6>
-                        <h3 className='font-bold text-sky-600 text-[60px] -mt-[10px]'>$3.00/<span className='text-[40px]'>img</span></h3>
-                        <h6 className='font-medium text-[20px] -mt-[10px]'>Complexity: <span className='font-bold text-sky-600'>Basic</span></h6>
+                        <h6 className='font-medium text-[20px]'>{activeBtn}</h6>
+                        <h3 className='font-bold text-sky-600 text-[60px] -mt-[10px]'>${value * add}.00<span className='text-[40px]'>/img</span></h3>
+                        <h6 className='font-medium text-[20px] -mt-[10px]'>Complexity: <span className='font-bold text-sky-600'>{service}</span></h6>
                         {/* Pricing */}
                         <div className='mt-[30px]'>
                             <div className='flex justify-between font-medium'>
                                 <p>Drop Shadow</p>
                                 <p>$0.50</p>
                             </div>
-                            <div className='flex justify-between font-medium mt-[20px]'>
-                                <p>Margin/Crop</p>
-                                <p>$0.50</p>
+                            <div>
+                               {
+                                right ?  "" : <div  className='flex justify-between font-medium mt-[20px]'>
+                                     <p>Web Size</p>
+                                    <p>$0.50</p>
+                                </div> 
+                               }
                             </div>
-                            <div className='flex justify-between font-medium mt-[20px]'>
-                                <p>Adjustment</p>
-                                <p>$0.50</p>
-                            </div>
-                            <div className='flex justify-between font-medium mt-[20px]'>
-                                <p>Retouch</p>
-                                <p>$0.50</p>
-                            </div>
+                             <div>
+                                {
+                                    rightTwo ? "" :  <div className='flex justify-between font-medium mt-[20px]'>
+                                    <p>Adjustment</p>
+                                    <p>$0.50</p>
+                                </div>
+                                }
+                             </div>
+                             {
+                                rightThree ? "" : <div className='flex justify-between font-medium mt-[20px]'><p>Margin</p> <p>$0.50</p></div>
+                             }
+                            
+                            {
+                                rightFour ? "" : <div className='flex justify-between font-medium mt-[20px]'><p>Retouch</p> <p>$0.50</p></div>
+                             }
                             <div className='flex justify-between font-bold mt-[20px]'>
                                 <p>Per Image Sub-Total</p>
                                 <p>$3.00</p>
@@ -242,9 +325,9 @@ const Pricing = () => {
                             <p className='text-[18px] font-medium'>Image Calculator</p>
                             <p className='mt-[6px] font-medium'>Select How Many Images You Need</p>
                             <div className='flex items-center justify-center gap-[15px]'>
-                                <img src={minus} alt="Light House Minus Icon" />
-                                <p className='font-bold text-[60px]'>1</p>
-                                <img src={plus} alt="Light House Plus Icon" />
+                                <button onClick={handleMinus}><FaMinus className='text-[30px]' /></button>
+                                <p className='font-bold text-[60px]'>${add}</p>
+                                <button onClick={() => setAdd(add + 1)}><FaPlus className='text-[30px]' /></button>
                             </div>
                         </div>
                         <div className='flex justify-between font-bold text-[30px]'>
