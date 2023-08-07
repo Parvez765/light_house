@@ -9,7 +9,7 @@ import "react-phone-number-input/style.css";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import ClickToUpload from "./ClickToUpload";
 
-const WeUnderstandYou = ({ handleNext }) => {
+const WeUnderstandYou = ({ handleNext, setTypedEmail }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
@@ -39,7 +39,8 @@ const WeUnderstandYou = ({ handleNext }) => {
       dragFiles.length !== 0;
 
     setIsFormComplete(isFormComplete);
-  }, [name, email, number, service, instructions, dragFiles]);
+    setTypedEmail(email);
+  }, [name, email, number, service, instructions, dragFiles, setTypedEmail]);
 
   const handlePhoneChange = (value) => {
     setNumber(value);

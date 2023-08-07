@@ -7,8 +7,10 @@ import DeliveryService from "../../Components/Home/DeliveryService/DeliveryServi
 import ForWhomeWeWork from "../../Components/Home/ForWhomeWeWork/ForWhomeWeWork";
 import Testimonials from "../../Components/Home/Testimonials/Testimonials";
 import LetsGetStarted from "../../Components/Home/LetsGetStarted/LetsGetStarted";
+import AllTitle from "../../Hooks/AllTitle/AllTitle";
 
 const HomePage = () => {
+  AllTitle("Home");
   return (
     <div>
       <Hero />

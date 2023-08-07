@@ -201,7 +201,7 @@ const LetsGetStarted = () => {
               </div>
             </div>
 
-            <div className="sm:w-[500px] lg:w-[700px] xl:w-[800px] border border-black">
+            <div className="sm:w-[500px] lg:w-[700px] xl:w-[800px]">
               {activeComponent === "component1" && <TryUsForFree />}
               {activeComponent === "component2" && <GetAQuote />}
               {activeComponent === "component3" && <PlaceYourOrder />}

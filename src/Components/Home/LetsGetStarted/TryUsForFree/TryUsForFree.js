@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import WeUnderstandYou from "./WeUnderstandYou";
 import ConfirmYourEmail from "./ConfirmYourEmail";
 import Payment from "./Payment";
 
 const TryUsForFree = () => {
   const [activeStep, setActiveStep] = useState(1);
+  const [typedEmail, setTypedEmail] = useState("");
 
   const handleNext = () => {
     setActiveStep((prevStep) => prevStep + 1);
@@ -17,13 +18,19 @@ const TryUsForFree = () => {
   const renderStepComponent = () => {
     switch (activeStep) {
       case 1:
-        return <WeUnderstandYou handleNext={handleNext} />;
+        return (
+          <WeUnderstandYou
+            handleNext={handleNext}
+            setTypedEmail={setTypedEmail}
+          />
+        );
       case 2:
         return (
           <ConfirmYourEmail
             activeStep={activeStep}
             handleNext={handleNext}
             handleBack={handleBack}
+            typedEmail={typedEmail}
           />
         );
       case 3:
