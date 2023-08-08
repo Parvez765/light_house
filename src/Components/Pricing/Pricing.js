@@ -16,6 +16,7 @@ import medium from "../../Assets/pricing/medium.png"
 import superComplex from "../../Assets/pricing/superComplex.png"
 import complex from "../../Assets/pricing/complex.png"
 import checkBoxRight from "../../Assets/pricing/checkBoxRight.png"
+import { FaCheck, FaCheckSquare } from "react-icons/fa";
 // import photoRetouching from "../../Assets/pricing/photoRetouching.png"
 // import checkBoxRound from "../../Assets/pricing/_Checkbox_round.png"
 import { FaPlus, FaMinus } from "react-icons/fa";
@@ -32,9 +33,12 @@ const Pricing = () => {
     const [rightThree, setRightThree] = useState(true)
     const [rightFour, setRightFour] = useState(true)
 
-
+    const [sum, setSum] = useState(0)
+    // console.log(sum, setSum);
 
     const handleClick = (btn) => {
+        // activeBtn === "Clipping Path" && setValue(3)
+        // activeBtn === "Photo Retouching" && setValue(5)
         setActiveBtn(btn);
     };
 
@@ -68,8 +72,37 @@ const Pricing = () => {
     const handleRightFour = () => {
         setRightFour(!rightFour)
     }
+    
+   const handleAddSum = () => {
+      setSum(sum + 0.50)
+    }
+   
+    const handleDeleteSum = ()=> {
+        setSum(sum - 0.50)
+    }
 
+    const handleAddSumTwo = () => {
+        setSum(sum + 0.50)
+      }
+     
+      const handleDeleteSumTwo = ()=> {
+          setSum(sum - 0.50)
+      }
 
+      const handleAddSumThree = () => {
+        setSum(sum + 0.50)
+      }
+     
+      const handleDeleteSumThree = ()=> {
+          setSum(sum - 0.50)
+      }
+      const handleAddSumFour = () => {
+        setSum(sum + 0.50)
+      }
+     
+      const handleDeleteSumFour = ()=> {
+          setSum(sum - 0.50)
+      }
     // console.log(minusBtn);
 
     return (
@@ -102,9 +135,9 @@ const Pricing = () => {
                             <button onClick={() => handleServiceClick('Super Complex')} className={service === 'Super Complex' ? "activeBtn" : "defaultBtn"}>Super Complex</button>
                         </div>
                         <div className='mt-[16px]'>
-                            <h6>Select Any of Four Services</h6>
+                            {/* <h6>Select Any of Four Services</h6> */}
                             <div className='grid lg:grid-cols-2 mt-[10px] gap-[10px]'>
-                                <div>
+                                {/* <div>
                                     <div className='additionalServiceContainer'>
                                         <div className=''>
                                             <div className='flex gap-[40px] items-center'>
@@ -143,8 +176,8 @@ const Pricing = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div>
+                                </div> */}
+                                {/* <div>
                                     <div className='additionalServiceContainer'>
                                         <div className=''>
                                             <div className='flex gap-[40px] items-center'>
@@ -181,7 +214,7 @@ const Pricing = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className='mt-[16px]'>
@@ -204,7 +237,7 @@ const Pricing = () => {
                                                 </div>
                                                 <div onClick={handleRight}>
                                                     {
-                                                        right ? <img src={checkMark} alt="LightHouse CheckBox" /> : <img src={checkBoxRight} alt="LightHouse CheckBox" />
+                                                        right ?  <button onClick={handleAddSum}><FaCheckSquare/></button> : <button onClick={handleDeleteSum}><FaCheck/></button>
                                                     }
                                                 </div>
                                             </div>
@@ -226,7 +259,7 @@ const Pricing = () => {
                                                 </div>
                                                 <div onClick={handleRightTwo}>
                                                     {
-                                                        rightTwo ? <img src={checkMark} alt="LightHouse CheckBox" /> : <img src={checkBoxRight} alt="LightHouse CheckBox" />
+                                                        rightTwo ? <button onClick={handleAddSumTwo}><FaCheckSquare/></button> : <button onClick={handleDeleteSumTwo}><FaCheck/></button>
                                                     }
                                                 </div>
                                             </div>
@@ -250,7 +283,7 @@ const Pricing = () => {
                                                 </div>
                                                 <div onClick={handleRightThree}>
                                                     {
-                                                        rightThree ? <img src={checkMark} alt="LightHouse CheckBox" /> : <img src={checkBoxRight} alt="LightHouse CheckBox" />
+                                                        rightThree ? <button onClick={handleAddSumThree}><FaCheckSquare/></button> : <button onClick={handleDeleteSumThree}><FaCheck/></button>
                                                     }
                                                 </div>
                                             </div>
@@ -272,7 +305,7 @@ const Pricing = () => {
                                                 </div>
                                                 <div onClick={handleRightFour}>
                                                     {
-                                                        rightFour ? <img src={checkMark} alt="LightHouse CheckBox" /> : <img src={checkBoxRight} alt="LightHouse CheckBox" />
+                                                        rightFour ?  <button onClick={handleAddSumFour}><FaCheckSquare/></button> : <button onClick={handleDeleteSumFour}><FaCheck/></button>
                                                     }
                                                 </div>
                                             </div>
@@ -289,8 +322,8 @@ const Pricing = () => {
                         {/* Pricing */}
                         <div className='mt-[30px]'>
                             <div className='flex justify-between font-medium'>
-                                <p>Drop Shadow</p>
-                                <p>$0.50</p>
+                                {/* <p>Drop Shadow</p>
+                                <p>$0.50</p> */}
                             </div>
                             <div>
                                {
@@ -317,7 +350,7 @@ const Pricing = () => {
                              }
                             <div className='flex justify-between font-bold mt-[20px]'>
                                 <p>Per Image Sub-Total</p>
-                                <p>$3.00</p>
+                                <p>${sum}</p>
                             </div>
                         </div>
                         {/* Pricing Calculation */}
@@ -332,7 +365,7 @@ const Pricing = () => {
                         </div>
                         <div className='flex justify-between font-bold text-[30px]'>
                             <p>Total</p>
-                            <p>$0.50</p>
+                            <p>${value * add + sum}</p>
                         </div>
                         <div className='mt-[30px]'>
                             <button className='bg-sky-600 px-14 py-4 w-full border rounded-lg text-white font-bold text-[20px]'>Get Started</button>
