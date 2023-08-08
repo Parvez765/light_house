@@ -71,6 +71,7 @@ const LetsGetStarted = () => {
 
         <div className="flex justify-center pb-20 bg-gradient-to-bl from-cyan-200 from-10% via-white via-30% to-cyan-200 to-90% px-4">
           <div className="flex flex-col xl:flex-row justify-center items-center xl:items-start gap-2 bg-gradient-to-br from-cyan-200 from-10% via-white via-60% to-cyan-200 to-90% py-4 px-4 rounded-xl">
+            {/* The 4 buttons which will change the component */}
             <div className="grid grid-cols-2 md:grid-cols-4 xl:flex xl:flex-col xl:w-[250px] bg-gradient-to-tl from-cyan-200 to-white xl:rounded-xl">
               <div
                 className={`border-[2px] border-white hover:cursor-pointer xl:rounded-t-xl py-3 px-1 ${
@@ -201,6 +202,7 @@ const LetsGetStarted = () => {
               </div>
             </div>
 
+            {/* Components that will be changed */}
             <div className="sm:w-[500px] lg:w-[700px] xl:w-[800px]">
               {activeComponent === "component1" && <TryUsForFree />}
               {activeComponent === "component2" && <GetAQuote />}
