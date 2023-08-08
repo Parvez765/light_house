@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail, AiOutlineArrowLeft } from "react-icons/ai";
 import styles from "./ConfirmYourEmail.module.css"; // Import the CSS Module
 
 const ConfirmYourEmail = ({ handleNext, handleBack, typedEmail }) => {
   const [codes, setCodes] = useState(Array(6).fill(""));
+  const [loader, setLoader] = useState(false);
 
   const handleInputChange = (index, value) => {
     if (!isNaN(value) && value.length <= 1) {
@@ -21,25 +22,35 @@ const ConfirmYourEmail = ({ handleNext, handleBack, typedEmail }) => {
   };
 
   const inputRefs = [];
-
   const handleInputRef = (index, ref) => {
     inputRefs[index] = ref;
   };
 
+  const allCodesFilled = codes.every((code) => code !== "");
+
+  const handleVerify = () => {
+    setLoader(true);
+
+    setTimeout(() => {
+      handleNext(); // Navigate to the next step after 2 seconds
+    }, 2000);
+  };
+
   return (
-    <div>
-      <div className="border border-black rounded-xl bg-white">
+    <div className="flex justify-center xl:grid xl:grid-cols-2  mt-4">
+      <div></div>
+      <div className="sm:w-[400px] xl:w-full border border-black py-4 rounded-xl bg-white">
         <div className="flex justify-center mb-6">
           <div className="flex justify-center items-center h-[60px] w-[60px] rounded-full bg-sky-200">
             <AiOutlineMail className="text-4xl text-sky-600" />
           </div>
         </div>
 
-        <h2 className="text-3xl font-semibold text-center mb-4 mx-2">
+        <h2 className="text-3xl font-semibold text-center mb-10 mx-2">
           Confirm your email
         </h2>
 
-        <div className="flex justify-center items-center gap-2 mb-6 mx-2">
+        <div className="flex flex-col items-center gap-2 mb-6 mx-2">
           <h2 className="text-xl font-semibold">Enter Verification Code:</h2>
 
           <div className="flex items-center justify-center gap-2">
@@ -70,20 +81,48 @@ const ConfirmYourEmail = ({ handleNext, handleBack, typedEmail }) => {
         </div>
 
         <div className="flex justify-center mx-2 mb-4">
-          <h2 className="text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out text-xl underline underline-offset-2 font-medium hover:cursor-pointer">
+          <h2 className="text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out text-xl font-medium hover:cursor-pointer">
             Didn't receive an email?
           </h2>
         </div>
 
-        <h2 className="text-center text-[#595a5c] text-lg font-medium mx-16">
+        <h2 className="text-center text-[#595a5c] text-lg font-medium mx-10">
           We've sent a verification code to{" "}
           <span className="text-black font-bold">{typedEmail}</span> to make
           sure you're really you (Remember to check your Spam folder).
         </h2>
 
-        <div className="flex justify-between mt-6">
-          <button onClick={handleBack}>Go Back</button>
-          <button onClick={handleNext}>Next</button>
+        <div className="flex justify-between items-center mt-10 mx-4">
+          <div
+            onClick={handleBack}
+            className="border border-gray-400 hover:border-transparent p-4 rounded-xl hover:bg-sky-600 text-black hover:text-white duration-300 ease-in-out hover:cursor-pointer"
+          >
+            <AiOutlineArrowLeft className="text-xl" />
+          </div>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleVerify}
+              className="btn bg-sky-600 hover:bg-sky-500 hover:cursor-pointer rounded-lg font-semibold text-white text-lg normal-case"
+              disabled={!allCodesFilled}
+            >
+              Verify
+            </button>
+
+            {/* Loader for transfer button */}
+            <h2>
+              {loader ? (
+                <div class="flex flex-col">
+                  <div
+                    class="w-6 h-6 rounded-full animate-spin
+                            border-4 border-solid border-blue-900 border-t-transparent shadow-md"
+                  ></div>
+                </div>
+              ) : (
+                ""
+              )}
+            </h2>
+          </div>
         </div>
       </div>
     </div>
