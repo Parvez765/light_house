@@ -37,9 +37,9 @@ const ConfirmYourEmail = ({ handleNext, handleBack, typedEmail }) => {
   };
 
   return (
-    <div className="flex justify-center xl:grid xl:grid-cols-2  mt-4">
+    <div className="flex justify-center xl:grid xl:grid-cols-2">
       <div></div>
-      <div className="sm:w-[400px] xl:w-full border border-black py-4 rounded-xl bg-white">
+      <div className="sm:w-[400px] xl:w-full py-4 rounded-xl bg-white drop-shadow-2xl shadow-2xl">
         <div className="flex justify-center mb-6">
           <div className="flex justify-center items-center h-[60px] w-[60px] rounded-full bg-sky-200">
             <AiOutlineMail className="text-4xl text-sky-600" />

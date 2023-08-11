@@ -2,8 +2,16 @@ import React, { useState } from "react";
 import WeUnderstandYou from "./WeUnderstandYou";
 import ConfirmYourEmail from "./ConfirmYourEmail";
 import Payment from "./Payment";
+import { useEffect } from "react";
 
-const TryUsForFree = () => {
+const TryUsForFree = ({ changeBgColor }) => {
+  useEffect(() => {
+    // Change the background color when this component is active
+    changeBgColor(
+      "bg-gradient-to-br from-cyan-200 from-20% via-white via-60% to-cyan-200 to-80%"
+    );
+  }, [changeBgColor]);
+
   const [activeStep, setActiveStep] = useState(1);
   const [typedEmail, setTypedEmail] = useState("");
 

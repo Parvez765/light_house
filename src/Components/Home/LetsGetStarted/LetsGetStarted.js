@@ -11,6 +11,27 @@ import CustomOrder from "./CustomOrder/CustomOrder";
 import TryUsForFree from "./TryUsForFree/TryUsForFree";
 
 const LetsGetStarted = () => {
+  // Components Background Color State
+  const [bgColor, setBgColor] = useState(
+    "bg-gradient-to-br from-cyan-200 from-10% via-white via-60% to-cyan-200 to-90%"
+  );
+
+  // Function to update background color
+  const changeBgColor = (color) => {
+    setBgColor(color);
+  };
+
+  // Button's Background color state
+  const btnBgColor = [
+    "bg-gradient-to-tl from-cyan-200 to-white",
+    "bg-gradient-to-tl from-red-200 to-white",
+    "bg-gradient-to-tl from-green-200 to-white",
+    "bg-gradient-to-tl from-fuchsia-200 to-white",
+  ];
+
+  // To show the active button and background color index
+  const [btnBgColorIndex, setBtnBgColorIndex] = useState(0); // Initial color index
+
   // All State Declaration
   const [isHovered1, setIsHovered1] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
@@ -49,8 +70,9 @@ const LetsGetStarted = () => {
   };
 
   // Function for showing the active component
-  const handleClick = (componentName) => {
+  const handleButtonClick = (componentName, colorIndex) => {
     setActiveComponent(componentName);
+    setBtnBgColorIndex(colorIndex);
   };
 
   return (
@@ -69,17 +91,24 @@ const LetsGetStarted = () => {
           </h2>
         </div>
 
-        <div className="flex justify-center pb-20 bg-gradient-to-bl from-cyan-200 from-10% via-white via-30% to-cyan-200 to-90% px-4">
-          <div className="flex flex-col xl:flex-row justify-center items-center xl:items-start gap-2 bg-gradient-to-br from-cyan-200 from-10% via-white via-60% to-cyan-200 to-90% py-4 px-4 rounded-xl">
+        <div className="flex justify-center pb-20 px-4">
+          {/* Let's Get Started Div */}
+          <div
+            className={`${bgColor} flex flex-col xl:flex-row justify-center items-center xl:items-center gap-2 py-4 px-4 rounded-xl`}
+          >
             {/* The 4 buttons which will change the component */}
-            <div className="grid grid-cols-2 md:grid-cols-4 xl:flex xl:flex-col xl:w-[250px] bg-gradient-to-tl from-cyan-200 to-white xl:rounded-xl">
+            <div
+              className={`${btnBgColor[btnBgColorIndex]} grid grid-cols-2 md:grid-cols-4 xl:flex xl:flex-col xl:w-[250px] xl:rounded-xl`}
+            >
               <div
                 className={`border-[2px] border-white hover:cursor-pointer xl:rounded-t-xl py-3 px-1 ${
-                  activeComponent === "component1" ? "bg-gray-200" : ""
+                  activeComponent === "component1"
+                    ? "border-l-sky-500"
+                    : "border-transparent"
                 }`}
                 onMouseEnter={handleMouseEnter1}
                 onMouseLeave={handleMouseLeave1}
-                onClick={() => handleClick("component1")}
+                onClick={() => handleButtonClick("component1", 0)}
               >
                 <div
                   className={
@@ -107,17 +136,19 @@ const LetsGetStarted = () => {
 
               <div
                 className={`border-[2px] border-white hover:cursor-pointer py-3 px-1 ${
-                  activeComponent === "component2" ? "bg-gray-200" : ""
+                  activeComponent === "component2"
+                    ? "border-l-red-400"
+                    : "border-transparent"
                 }`}
                 onMouseEnter={handleMouseEnter2}
                 onMouseLeave={handleMouseLeave2}
-                onClick={() => handleClick("component2")}
+                onClick={() => handleButtonClick("component2", 1)}
               >
                 <div
                   className={
                     `flex justify-center mb-2 text-3xl lg:text-5xl duration-300 ease-in-out ${
-                      activeComponent === "component2" ? "text-sky-600" : ""
-                    } ` + (isHovered2 ? "text-sky-600" : "text-[#595a5c]")
+                      activeComponent === "component2" ? "text-red-400" : ""
+                    } ` + (isHovered2 ? "text-red-400" : "text-[#595a5c]")
                   }
                 >
                   <BsClipboardCheck />
@@ -139,17 +170,19 @@ const LetsGetStarted = () => {
 
               <div
                 className={`border-[2px] border-white hover:cursor-pointer py-3 px-1 ${
-                  activeComponent === "component3" ? "bg-gray-200" : ""
+                  activeComponent === "component3"
+                    ? "border-l-green-600"
+                    : "border-transparent"
                 }`}
                 onMouseEnter={handleMouseEnter3}
                 onMouseLeave={handleMouseLeave3}
-                onClick={() => handleClick("component3")}
+                onClick={() => handleButtonClick("component3", 2)}
               >
                 <div
                   className={
                     `flex justify-center mb-2 text-3xl lg:text-5xl duration-300 ease-in-out ${
-                      activeComponent === "component3" ? "text-sky-600" : ""
-                    } ` + (isHovered3 ? "text-sky-600" : "text-[#595a5c]")
+                      activeComponent === "component3" ? "text-green-600" : ""
+                    } ` + (isHovered3 ? "text-green-600" : "text-[#595a5c]")
                   }
                 >
                   <BsCartCheck />
@@ -171,17 +204,19 @@ const LetsGetStarted = () => {
 
               <div
                 className={`border-[2px] border-white xl:rounded-b-xl hover:cursor-pointer py-3 px-1 ${
-                  activeComponent === "component4" ? "bg-gray-200" : ""
+                  activeComponent === "component4"
+                    ? "border-l-fuchsia-500"
+                    : "border-transparent"
                 }`}
                 onMouseEnter={handleMouseEnter4}
                 onMouseLeave={handleMouseLeave4}
-                onClick={() => handleClick("component4")}
+                onClick={() => handleButtonClick("component4", 3)}
               >
                 <div
                   className={
                     `flex justify-center mb-2 text-3xl lg:text-5xl duration-300 ease-in-out ${
-                      activeComponent === "component4" ? "text-sky-600" : ""
-                    } ` + (isHovered4 ? "text-sky-600" : "text-[#595a5c]")
+                      activeComponent === "component4" ? "text-fuchsia-600" : ""
+                    } ` + (isHovered4 ? "text-fuchsia-600" : "text-[#595a5c]")
                   }
                 >
                   <RiFileList2Line />
@@ -203,11 +238,19 @@ const LetsGetStarted = () => {
             </div>
 
             {/* Components that will be changed */}
-            <div className="sm:w-[500px] lg:w-[700px] xl:w-[800px]">
-              {activeComponent === "component1" && <TryUsForFree />}
-              {activeComponent === "component2" && <GetAQuote />}
-              {activeComponent === "component3" && <PlaceYourOrder />}
-              {activeComponent === "component4" && <CustomOrder />}
+            <div className="w-full sm:w-[500px] max-h-[100%] lg:w-[700px] xl:w-[800px]">
+              {activeComponent === "component1" && (
+                <TryUsForFree changeBgColor={changeBgColor} />
+              )}
+              {activeComponent === "component2" && (
+                <GetAQuote changeBgColor={changeBgColor} />
+              )}
+              {activeComponent === "component3" && (
+                <PlaceYourOrder changeBgColor={changeBgColor} />
+              )}
+              {activeComponent === "component4" && (
+                <CustomOrder changeBgColor={changeBgColor} />
+              )}
             </div>
           </div>
         </div>
