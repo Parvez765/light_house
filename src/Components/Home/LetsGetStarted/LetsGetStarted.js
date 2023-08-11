@@ -103,7 +103,7 @@ const LetsGetStarted = () => {
               <div
                 className={`border-[2px] border-white hover:cursor-pointer xl:rounded-t-xl py-3 px-1 ${
                   activeComponent === "component1"
-                    ? "border-l-sky-500"
+                    ? "border-b-sky-500 border-l-white xl:border-b-white xl:border-l-sky-500"
                     : "border-transparent"
                 }`}
                 onMouseEnter={handleMouseEnter1}
@@ -137,7 +137,7 @@ const LetsGetStarted = () => {
               <div
                 className={`border-[2px] border-white hover:cursor-pointer py-3 px-1 ${
                   activeComponent === "component2"
-                    ? "border-l-red-400"
+                    ? "border-b-red-400 border-l-white xl:border-b-white xl:border-l-red-400"
                     : "border-transparent"
                 }`}
                 onMouseEnter={handleMouseEnter2}
@@ -171,7 +171,7 @@ const LetsGetStarted = () => {
               <div
                 className={`border-[2px] border-white hover:cursor-pointer py-3 px-1 ${
                   activeComponent === "component3"
-                    ? "border-l-green-600"
+                    ? "border-b-green-600 border-l-white xl:border-b-white xl:border-l-green-600"
                     : "border-transparent"
                 }`}
                 onMouseEnter={handleMouseEnter3}
@@ -205,7 +205,7 @@ const LetsGetStarted = () => {
               <div
                 className={`border-[2px] border-white xl:rounded-b-xl hover:cursor-pointer py-3 px-1 ${
                   activeComponent === "component4"
-                    ? "border-l-fuchsia-500"
+                    ? "border-b-fuchsia-500 border-l-white xl:border-b-white xl:border-l-fuchsia-500"
                     : "border-transparent"
                 }`}
                 onMouseEnter={handleMouseEnter4}
@@ -238,7 +238,7 @@ const LetsGetStarted = () => {
             </div>
 
             {/* Components that will be changed */}
-            <div className="w-full sm:w-[500px] max-h-[100%] lg:w-[700px] xl:w-[800px]">
+            <div className="sm:w-[500px] lg:w-[700px] xl:w-[800px]">
               {activeComponent === "component1" && (
                 <TryUsForFree changeBgColor={changeBgColor} />
               )}
