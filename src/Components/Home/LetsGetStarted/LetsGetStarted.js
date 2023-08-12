@@ -94,11 +94,11 @@ const LetsGetStarted = () => {
         <div className="flex justify-center pb-20 px-4">
           {/* Let's Get Started Div */}
           <div
-            className={`${bgColor} flex flex-col xl:flex-row justify-center items-center xl:items-center gap-2 py-4 px-4 rounded-xl`}
+            className={`${bgColor} flex flex-col xl:flex-row justify-center items-center xl:items-center gap-2 py-4 px-4 rounded-xl duration-300 ease-in-out`}
           >
             {/* The 4 buttons which will change the component */}
             <div
-              className={`${btnBgColor[btnBgColorIndex]} grid grid-cols-2 md:grid-cols-4 xl:flex xl:flex-col xl:w-[250px] xl:rounded-xl`}
+              className={`${btnBgColor[btnBgColorIndex]} grid grid-cols-2 md:grid-cols-4 xl:flex xl:flex-col xl:w-[250px] xl:rounded-xl border border-black`}
             >
               <div
                 className={`border-[2px] border-white hover:cursor-pointer xl:rounded-t-xl py-3 px-1 ${
@@ -238,7 +238,7 @@ const LetsGetStarted = () => {
             </div>
 
             {/* Components that will be changed */}
-            <div className="sm:w-[500px] lg:w-[700px] xl:w-[800px]">
+            <div className="flex justify-center sm:w-[500px] xl:h-[800px] lg:w-[700px] xl:w-[800px] border-black border">
               {activeComponent === "component1" && (
                 <TryUsForFree changeBgColor={changeBgColor} />
               )}

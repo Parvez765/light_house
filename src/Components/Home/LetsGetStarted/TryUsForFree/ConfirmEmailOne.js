@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { AiOutlineMail, AiOutlineArrowLeft } from "react-icons/ai";
-import styles from "./ConfirmYourEmail.module.css"; // Import the CSS Module
+import styles from "./ConfirmEmailOne.module.css"; // Import the CSS Module
+import emailGIF from "../../../../Assets/LetsGetStarted/email.gif";
 
-const ConfirmYourEmail = ({ handleNext, handleBack, typedEmail }) => {
+const ConfirmEmailOne = ({ handleNext, handleBack, typedEmail }) => {
   const [codes, setCodes] = useState(Array(6).fill(""));
   const [loader, setLoader] = useState(false);
 
@@ -37,9 +38,15 @@ const ConfirmYourEmail = ({ handleNext, handleBack, typedEmail }) => {
   };
 
   return (
-    <div className="flex justify-center xl:grid xl:grid-cols-2">
-      <div></div>
-      <div className="sm:w-[400px] xl:w-full py-4 rounded-xl bg-white drop-shadow-2xl shadow-2xl">
+    <div className="h-full sm:w-[400px] xl:w-full flex flex-col items-center xl:grid xl:grid-cols-2 gap-4">
+      <img
+        src={emailGIF}
+        className="h-[200px] xl:h-[400px] rounded-lg object-cover"
+        alt=""
+        srcset=""
+      />
+
+      <div className="py-4 rounded-xl bg-white drop-shadow-2xl shadow-2xl">
         <div className="flex justify-center mb-6">
           <div className="flex justify-center items-center h-[60px] w-[60px] rounded-full bg-sky-200">
             <AiOutlineMail className="text-4xl text-sky-600" />
@@ -53,7 +60,7 @@ const ConfirmYourEmail = ({ handleNext, handleBack, typedEmail }) => {
         <div className="flex flex-col items-center gap-2 mb-6 mx-2">
           <h2 className="text-xl font-semibold">Enter Verification Code:</h2>
 
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex items-center justify-center gap-1 sm:gap-2">
             {codes.map((code, index) => (
               <input
                 key={index}
@@ -129,4 +136,4 @@ const ConfirmYourEmail = ({ handleNext, handleBack, typedEmail }) => {
   );
 };
 
-export default ConfirmYourEmail;
+export default ConfirmEmailOne;

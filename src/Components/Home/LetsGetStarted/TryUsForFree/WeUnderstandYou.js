@@ -48,7 +48,7 @@ const WeUnderstandYou = ({ handleNext, setTypedEmail }) => {
   };
 
   return (
-    <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-center xl:pl-4 py-10 xl:py-2">
+    <div className="h-full w-full flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:items-center p-2">
       <div>
         <div className="mb-4">
           <h2 className="text-3xl font-bold mb-3">We understand you!</h2>

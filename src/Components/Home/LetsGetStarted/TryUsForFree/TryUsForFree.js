@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import WeUnderstandYou from "./WeUnderstandYou";
-import ConfirmYourEmail from "./ConfirmYourEmail";
+import ConfirmEmailOne from "./ConfirmEmailOne";
 import Payment from "./Payment";
 import { useEffect } from "react";
 
@@ -34,7 +34,7 @@ const TryUsForFree = ({ changeBgColor }) => {
         );
       case 2:
         return (
-          <ConfirmYourEmail
+          <ConfirmEmailOne
             activeStep={activeStep}
             handleNext={handleNext}
             handleBack={handleBack}
