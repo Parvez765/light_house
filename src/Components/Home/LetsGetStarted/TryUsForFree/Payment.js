@@ -4,7 +4,7 @@ import tickImg from "../../../../Assets/LetsGetStarted/tick.gif";
 const Payment = () => {
   return (
     <div className="h-full flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-6">
-      <div className="border border-black">
+      <div>
         <h2 className="text-4xl font-bold text-center lg:text-left">
           Congratulations!
         </h2>
@@ -29,7 +29,7 @@ const Payment = () => {
         </div>
       </div>
 
-      <div className="border border-black">
+      <div>
         <img
           src={tickImg}
           className="rounded-xl h-[300px] xl:h-[600px] object-cover"
