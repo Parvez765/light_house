@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./UnlockingTheMagic.module.css"
 import { FaRegCalendarAlt, FaPhoneAlt } from "react-icons/fa";
+import provideData from "../../../data/whatweprovide"
 
 const UnlockingTheMagic = () => {
     return (
@@ -17,6 +18,15 @@ const UnlockingTheMagic = () => {
                         <button className="tryUsFreeBtn flex items-center gap-[12px]">Make Phone Call <FaPhoneAlt/></button>
                     </div>
                 </div>
+                <div className='grid grid-cols-1 lg:grid-cols-3  gap-[30px] mt-[150px]'>
+                {
+                    provideData?.map(pd => <div className={`${styles.serviceContainer} `}>
+                        <img src={pd.img} alt="Services We Provide" className='w-[150px] block mx-auto' />
+                        <h1 className='text-left mt-[12px] text-[30px] font-bold'>{pd.name}</h1>
+                        <p className='mt-[12px] text-gray-500 text-[18px] font-normal'>{pd.details}</p>
+                    </div>)
+                }
+            </div>
             </div>
         </section>
     );
