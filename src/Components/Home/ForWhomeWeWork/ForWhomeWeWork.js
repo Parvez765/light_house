@@ -7,7 +7,7 @@ const ForWhomeWeWork = () => {
             <div className='container mx-auto'>
                 <div className='flex flex-col lg:flex-row justify-center items-start gap-[40px]'>
                     <div>
-                        <img src="https://i.ibb.co/wz5ZP6L/t-shirt.png" alt="Studio MetroDesk Whom We Work" />
+                        <img src="https://i.ibb.co/C6z0Z7k/image2.gif" alt="Studio MetroDesk Whom We Work" />
                     </div>
                     <div>
                         <h2 className="text-[50px] font-bold mb-[8px]">We work alongside you, <br/> for you! </h2>

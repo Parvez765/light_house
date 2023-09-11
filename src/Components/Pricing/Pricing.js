@@ -109,16 +109,16 @@ const Pricing = () => {
         <div className='pricingContainer'>
             <div className='container mx-auto'>
                 <h1 className='text-center text-4xl font-bold p-4'>Check Our Pricing</h1>
-                <p className='text-center -mt-[10px] font-medium'>Introducing a simpler and economical way to get <br /> the best photo editing solutions for Pro-photographers, Fashion, Apparel,</p>
+                <p className='text-center -mt-[10px] font-medium'>Introducing a simpler and economical way to get the best photo editing solutions for Pro-photographers, Fashion, Apparel,</p>
             </div>
-            <div className='flex items-center justify-center mt-6 gap-4'>
+            <div className='flex flex-col lg:flex-row items-center justify-center mt-6 gap-4'>
                 <button onClick={() => handleClick('Clipping Path')} className={activeBtn === 'Clipping Path' ? "priceActiveBtn" : "priceBtn"} >Clipping Path</button>
                 <button onClick={() => handleClick('Photo Retouching')} className={activeBtn === 'Photo Retouching' ? "priceActiveBtn" : "priceBtn"} >Photo Retouching</button>
                 <button onClick={() => handleClick('Ghost Mannequin')} className={activeBtn === 'Ghost Mannequin' ? "priceActiveBtn" : "priceBtn"} >Ghost Mannequin</button>
                 <button onClick={() => handleClick('Image Masking')} className={activeBtn === 'Image Masking' ? "priceActiveBtn" : "priceBtn"} >Image Masking</button>
             </div>
             <div className='pricingContentContainer 2xl:w-[1200px]'>
-                <div className='grid lg:grid-cols-2 gap-[50px]'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-[50px]'>
                     <div>
                         {service === "Basic" && <img src={basicImage} alt="Light House Basic" />}
                         {service === "Flat Rate" && <img src={flatRate} alt="Light House Flat Rate" />}
@@ -127,7 +127,7 @@ const Pricing = () => {
                         {service === "Super Complex" && <img src={superComplex} alt="Light House Super Complex" />}
 
 
-                        <div className='mt-[10px] flex gap-4'>
+                        <div className='mt-[10px] flex flex-col lg:flex-row gap-4'>
                             <button onClick={() => handleServiceClick('Basic')} className={service === 'Basic' ? "activeBtn" : "defaultBtn"}>Basic</button>
                             <button onClick={() => handleServiceClick('Flat Rate')} className={service === 'Flat Rate' ? "activeBtn" : "defaultBtn"}>Flat Rate</button>
                             <button onClick={() => handleServiceClick('Medium')} className={service === 'Medium' ? "activeBtn" : "defaultBtn"}>Medium</button>
@@ -136,8 +136,8 @@ const Pricing = () => {
                         </div>
                         <div className='mt-[16px]'>
                             {/* <h6>Select Any of Four Services</h6> */}
-                            <div className='grid lg:grid-cols-2 mt-[10px] gap-[10px]'>
-                                {/* <div>
+                            {/* <div className='grid lg:grid-cols-2 mt-[10px] gap-[10px]'>
+                                <div>
                                     <div className='additionalServiceContainer'>
                                         <div className=''>
                                             <div className='flex gap-[40px] items-center'>
@@ -176,8 +176,8 @@ const Pricing = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div> */}
-                                {/* <div>
+                                </div>
+                                <div>
                                     <div className='additionalServiceContainer'>
                                         <div className=''>
                                             <div className='flex gap-[40px] items-center'>
@@ -214,8 +214,8 @@ const Pricing = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div> */}
-                            </div>
+                                </div>
+                            </div> */}
                         </div>
                         <div className='mt-[16px]'>
                             <h6>You Can Select One Or All</h6>
@@ -317,7 +317,7 @@ const Pricing = () => {
                     </div>
                     <div className='pricingCalculator'>
                         <h6 className='font-medium text-[20px]'>{activeBtn}</h6>
-                        <h3 className='font-bold text-sky-600 text-[60px] -mt-[10px]'>${value * add}.00<span className='text-[40px]'>/img</span></h3>
+                        <h3 className='font-bold text-sky-600 text-[40px] lg:text-[60px] -mt-[10px]'>${value * add}.00<span className='text-[20px] lg:text-[40px]'>/img</span></h3>
                         <h6 className='font-medium text-[20px] -mt-[10px]'>Complexity: <span className='font-bold text-sky-600'>{service}</span></h6>
                         {/* Pricing */}
                         <div className='mt-[30px]'>
@@ -368,7 +368,7 @@ const Pricing = () => {
                             <p>${value * add + sum}</p>
                         </div>
                         <div className='mt-[30px]'>
-                            <button className='bg-sky-600 px-14 py-4 w-full border rounded-lg text-white font-bold text-[20px]'>Get Started</button>
+                            <button className='bg-sky-600 lg:px-14 py-4 w-full border rounded-lg text-white font-bold text-[20px]'>Get Started</button>
                         </div>
                     </div>
                 </div>

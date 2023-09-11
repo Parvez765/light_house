@@ -23,8 +23,8 @@ const FAQ = () => {
                 <p>Everything you need to know about the product and billing.</p>
                 <div className='mt-[50px] text-left'>
                     {faqs.map((faq, index) => (
-                        <div key={index} className=" w-[800px] mx-auto">
-                            <div className='flex justify-between items-center cursor-pointer' onClick={() => handleOnClick(index)}>
+                        <div key={index} className="lg:w-[800px] mx-auto">
+                            <div className='flex flex-col lg:flex-row justify-between lg:items-center cursor-pointer' onClick={() => handleOnClick(index)}>
                                 <h2 className='font-bold text-[18px] mt-[20px]'>
                                     {faq.question}
                                 </h2>
