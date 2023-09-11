@@ -1,5 +1,5 @@
-import React from 'react';
-import "./ForWhomeWeWork.css"
+import React from "react";
+import "./ForWhomeWeWork.css";
 
 const ForWhomeWeWork = () => {
     return (
@@ -22,8 +22,10 @@ const ForWhomeWeWork = () => {
                     </div>
                 </div>
             </div>
-        </div>
-    );
+         
+          </div>
+       
+  );
 };
 
 export default ForWhomeWeWork;

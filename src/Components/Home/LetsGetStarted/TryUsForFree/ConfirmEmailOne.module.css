@@ -1,0 +1,12 @@
+/* ConfirmYourEmail.module.css */
+.inputStyles {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Target number input specifically */
+.inputStyles[type="number"]::-webkit-inner-spin-button,
+.inputStyles[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
