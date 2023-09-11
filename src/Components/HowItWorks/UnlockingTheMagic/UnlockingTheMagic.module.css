@@ -1,4 +1,5 @@
-.tryUsFree{
-    background-color: rgb(4, 221, 225);
-    border: 1px solid;
+.headingContainer{
+    background: linear-gradient(rgb(209, 224, 255), white)
+    /* border: 1px solid; */
+    /* height: 100vh */
 }

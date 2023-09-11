@@ -1,19 +1,22 @@
 import React from 'react';
 import styles from "./UnlockingTheMagic.module.css"
+import { FaRegCalendarAlt, FaPhoneAlt } from "react-icons/fa";
 
 const UnlockingTheMagic = () => {
     return (
-        <section className='container mx-auto p-10'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 items-center'>
+        <section className={`${styles.headingContainer}`}>
+            <div className='container mx-auto p-10'>
                 <div>
-                    <h1 className='text-[60px] md:text-[80px] font-bold leading-[60px] lg:leading-[80px]'>Let's Explore With Us</h1>
-                    <p className='mt-[10px]'>With our pro photo editors, we provide 100% hand-drawn, accurate, professional, pixel-perfect clipping path services to top global e-commerce, fashion, accessories and apparel businesses around the world.<br/><br/>
-                        Starting at $1 per image. you can get large batches of images manually edited faster and cheaper in as little as 1 hour.</p>
-                    <div>
-                        <button className='tryUSFree'>Try us Free</button>
+                    <div className={`text-center`} >
+                        <h1 className='font-bold text-[40px] lg:text-[55px] leading-[40px] lg:leading-[70px]'>Unveiling Our Process:<br /> <span className='text-blue-900'>How It Works</span>
+                        </h1>
+                        <p className='mt-[12px] text-[16px] font-medium'>Our innovative approach, rooted in cutting-edge technology and strategic thinking, simplifies the complex. <br/>We've distilled our process into a seamless journey that ensures efficiency and effectiveness every step of the way. </p>
+                    </div>
+                    <div className='flex flex-col lg:flex-row justify-center items-center gap-[12px] mt-[12px]'>
+                        <button className="tryUsFreeBtn flex items-center gap-[12px]">Book Appointment <FaRegCalendarAlt className='text-[20px]'/></button>
+                        <button className="tryUsFreeBtn flex items-center gap-[12px]">Make Phone Call <FaPhoneAlt/></button>
                     </div>
                 </div>
-                
             </div>
         </section>
     );
