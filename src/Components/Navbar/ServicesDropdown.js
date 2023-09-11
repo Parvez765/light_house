@@ -19,7 +19,8 @@ import {
   GiConverseShoe,
   GiFamilyHouse,
 } from "react-icons/gi";
-import "./ServicesDropdown.css";
+
+import serviceStyle from "./ServicesDropdown.module.css";
 
 const ServicesDropdown = () => {
   const [hoverStates, setHoverStates] = useState([false, false]);
@@ -106,7 +107,7 @@ const ServicesDropdown = () => {
   return (
     <div className="dropdown dropdown-hover">
       <label
-        tabIndex={0}
+        tabIndex={1}
         className="flex justify-center items-center text-[#595a5c] hover:text-sky-600 text-lg xl:text-xl font-semibold hover:cursor-pointer"
       >
         <h2>Services</h2>
@@ -116,7 +117,7 @@ const ServicesDropdown = () => {
       {/* Dropdown Content */}
 
       <div
-        tabIndex={0}
+        tabIndex={1}
         className="dropdown-content flex gap-2 z-[1] px-6 pt-14 pb-2 drop-shadow-xl shadow-2xl bg-white lg:left-[-370px] rounded-xl w-[1000px]"
       >
         <div className="mr-10">
@@ -188,8 +189,10 @@ const ServicesDropdown = () => {
                   </div>
                   <div>
                     {hoverStates[index] && (
-                      <div className="slide-effect">
-                        <h2 className="slideDown ml-[28px] text-[#595a5c] text-sm font-medium">
+                      <div className={serviceStyle.sliderDiv}>
+                        <h2
+                          className={`${serviceStyle.slideDown} ml-[28px] text-[#595a5c] text-sm font-medium`}
+                        >
                           {service.description}
                         </h2>
                       </div>

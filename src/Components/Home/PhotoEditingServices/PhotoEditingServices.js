@@ -61,30 +61,27 @@ const PhotoEditingServices = () => {
           </h2>
         </div>
 
-        <div>
+        <div className="grid xl:grid-cols-2 2xl:grid-cols-3 gap-6 mx-4 xl:mx-8">
           {editingServices?.map((services) => (
-            <div className="flex justify-center">
-              <div className="flex flex-col-reverse md:flex-row justify-between gap-8 mb-16 mx-10">
-                <div className="flex justify-center md:flex-none">
-                  <div className="md:w-[300px]">
-                    <h2 className="text-center md:text-left text-3xl font-bold mb-4">
-                      {services?.title}
-                    </h2>
-                    <h2 className="text-center md:text-left text-[#595a5c] text-lg font-medium mb-6">
-                      {services?.details}
-                    </h2>
+            <div className="grid grid-cols-2 items-center gap-4 p-6 rounded-l-xl bg-gradient-to-bl from-sky-200 from-10% via-red-200 via-30% to-green-200 to-90% drop-shadow-xl shadow-xl hover:scale-105 duration-500 ease-in-out">
+              <div className="">
+                <h2 className="text-center md:text-left text-3xl font-bold mb-4">
+                  {services?.title}
+                </h2>
+                <h2 className="text-center md:text-left text-[#595a5c] text-lg font-medium mb-10">
+                  {services?.details}
+                </h2>
+              </div>
 
-                    <div className="flex justify-center md:justify-start">
-                      <div className="flex items-center gap-2 hover:cursor-pointer hover:bg-sky-600 text-sky-600 hover:text-white duration-300 ease-in-out border border-sky-600 hover:border-transparent rounded-r-xl px-4 py-1">
-                        <h2 className="text-lg font-semibold">Learn More</h2>
-                        <AiOutlineArrowRight className="text-lg font-semibold" />
-                      </div>
-                    </div>
+              <div className="flex flex-col items-center gap-4">
+                <img src={services?.img} className="w-full" alt="" />
+
+                {/* Learn More Button */}
+                <div className="flex justify-center md:justify-start">
+                  <div className="flex items-center gap-2 hover:cursor-pointer hover:bg-sky-600 text-sky-600 hover:text-white duration-300 ease-in-out border border-sky-600 hover:border-transparent rounded-l-xl px-4 py-1">
+                    <h2 className="text-lg font-semibold">Learn More</h2>
+                    <AiOutlineArrowRight className="text-lg font-semibold" />
                   </div>
-                </div>
-
-                <div>
-                  <img src={services?.img} className="w-full" alt="" />
                 </div>
               </div>
             </div>

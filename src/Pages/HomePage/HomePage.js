@@ -10,21 +10,25 @@ import WeServe from "../../Components/WeServe/WeServe";
 import SpeakWith from "../../Components/SpeakWith/SpeakWith";
 import FAQ from "../../Components/FAQ/FAQ";
 import Pricing from "../../Components/Pricing/Pricing";
+import LetsGetStarted from "../../Components/Home/LetsGetStarted/LetsGetStarted";
+import AllTitle from "../../Hooks/AllTitle/AllTitle";
 
 const HomePage = () => {
+  AllTitle("Home");
   return (
     <div>
       <Hero />
-      <DeliveryService/>
+      <DeliveryService />
       <TrustedCompanies />
-      <ForWhomeWeWork/>
+      <ForWhomeWeWork />
+      <LetsGetStarted />
       <PhotoEditingServices />
-      <Pricing/>
-      <WeServe/>
+      <Pricing />
+      <WeServe />
       <WhoWeHelp />
       <Testimonials />
-      <FAQ/>
-      <SpeakWith/>
+      <FAQ />
+      <SpeakWith />
     </div>
   );
 };
