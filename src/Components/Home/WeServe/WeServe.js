@@ -1,5 +1,5 @@
 import React from 'react';
-import servicePhoto from "../../Assets/WeServe/photo.png"
+import servicePhoto from "../../../Assets/WeServe/photo.png"
 import "./WeServe.css"
 
 

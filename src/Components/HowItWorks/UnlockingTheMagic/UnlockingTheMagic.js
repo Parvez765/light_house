@@ -1,8 +1,7 @@
 import React from 'react';
-import "./Hero.css"
-import heroImages from "../../Assets/HowItWorks/Hero/heroSection.jpg"
+import styles from "./UnlockingTheMagic.module.css"
 
-const Hero = () => {
+const UnlockingTheMagic = () => {
     return (
         <section className='container mx-auto p-10'>
             <div className='grid grid-cols-1 lg:grid-cols-2 items-center'>
@@ -14,14 +13,10 @@ const Hero = () => {
                         <button className='tryUSFree'>Try us Free</button>
                     </div>
                 </div>
-                <div>
-                    <figure>
-                        <img src={heroImages} alt="Light House How It Works" className='border rounded-lg' />
-                    </figure>
-                </div>
+                
             </div>
         </section>
     );
 };
 
-export default Hero;
+export default UnlockingTheMagic;

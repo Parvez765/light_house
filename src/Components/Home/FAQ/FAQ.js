@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./FAQ.css"
-import faqs from "../../data/faq"
+import faqs from "../../../data/faq"
 import {FaAngleDown, FaAngleUp} from "react-icons/fa";
 
 const FAQ = () => {

@@ -1,10 +1,13 @@
 import React from 'react';
-import Hero from '../../Components/HowItWorks/Hero';
+import UnlockingTheMagic from '../../Components/HowItWorks/UnlockingTheMagic/UnlockingTheMagic';
+
+
+
 
 const HowItWorks = () => {
     return (
         <div>
-            <Hero/>
+           <UnlockingTheMagic/>
         </div>
     );
 };

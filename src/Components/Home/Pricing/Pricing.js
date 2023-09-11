@@ -1,24 +1,15 @@
 import React, { useState } from 'react';
 import "./Pricing.css"
-import basicImage from "../../Assets/pricing/basic.png"
-import dropShadow from "../../Assets/pricing/dropShadow.png"
-import checkBox from "../../Assets/pricing/checkbox_base.png"
-import customShadow from "../../Assets/pricing/customShadow.png"
-import reflection from "../../Assets/pricing/reflection.png"
-import keepShdow from "../../Assets/pricing/custom.png"
-import webSize from "../../Assets/pricing/websize.png"
-import margin from "../../Assets/pricing/margin.png"
-import adjustment from "../../Assets/pricing/adjustment.png"
-import retouch from "../../Assets/pricing/retouch.png"
-import checkMark from "../../Assets/pricing/checkbox.png"
-import flatRate from "../../Assets/pricing/flatRate.png"
-import medium from "../../Assets/pricing/medium.png"
-import superComplex from "../../Assets/pricing/superComplex.png"
-import complex from "../../Assets/pricing/complex.png"
-import checkBoxRight from "../../Assets/pricing/checkBoxRight.png"
+import basicImage from "../../../Assets/pricing/basic.png"
+import webSize from "../../../Assets/pricing/websize.png"
+import margin from "../../../Assets/pricing/margin.png"
+import adjustment from "../../../Assets/pricing/adjustment.png"
+import retouch from "../../../Assets/pricing/retouch.png"
+import flatRate from "../../../Assets/pricing/flatRate.png"
+import medium from "../../../Assets/pricing/medium.png"
+import superComplex from "../../../Assets/pricing/superComplex.png"
+import complex from "../../../Assets/pricing/complex.png"
 import { FaCheck, FaCheckSquare } from "react-icons/fa";
-// import photoRetouching from "../../Assets/pricing/photoRetouching.png"
-// import checkBoxRound from "../../Assets/pricing/_Checkbox_round.png"
 import { FaPlus, FaMinus } from "react-icons/fa";
 import Swal from 'sweetalert2';
 

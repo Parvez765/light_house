@@ -1,7 +1,7 @@
 import React from 'react';
 import "./SpeakWith.css"
 import { FaEnvelopeOpenText } from "react-icons/fa"
-import youngMan from "../../Assets/callUs/young.png"
+import youngMan from "../../../Assets/callUs/young.png"
 
 const SpeakWith = () => {
     return (
