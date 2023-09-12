@@ -66,8 +66,8 @@ const PlansAndPricing = () => {
       </h2>
 
       {/* Plan Cards */}
-      <div className="flex justify-center items-center gap-4">
-        <div className="flex flex-col border border-gray-300 hover:border-sky-600 duration-300 ease-in-out rounded-xl px-6 py-8 w-[470px]">
+      <div className="flex flex-wrap justify-center items-center gap-4">
+        <div className="flex flex-col border border-gray-300 hover:border-sky-600 duration-300 ease-in-out rounded-xl px-6 py-8 sm:w-[470px]">
           <div className="flex justify-between items-center gap-6 mb-10">
             <div className="flex flex-col">
               <h2 className="text-4xl font-bold">Basic</h2>
@@ -165,7 +165,7 @@ const PlansAndPricing = () => {
           </div>
         </div>
 
-        <div className="flex flex-col rounded-xl px-2 py-2 w-[480px] bg-gradient-to-r from-blue-200 from-10% via-blue-400 via-40% to-sky-600 to-90%">
+        <div className="flex flex-col rounded-xl px-2 py-2 sm:w-[480px] bg-gradient-to-r from-blue-200 from-10% via-blue-400 via-40% to-sky-600 to-90%">
           <h2 className="text-white font-semibold text-xl text-center mb-2">
             Most Popular
           </h2>
@@ -271,7 +271,7 @@ const PlansAndPricing = () => {
           </div>
         </div>
 
-        <div className="flex flex-col border border-gray-300 hover:border-sky-600 duration-300 ease-in-out rounded-xl px-6 py-8 w-[470px]">
+        <div className="flex flex-col border border-gray-300 hover:border-sky-600 duration-300 ease-in-out rounded-xl px-6 py-8 sm:w-[470px]">
           <div className="flex justify-between items-center gap-3 mb-10">
             <div className="flex flex-col">
               <h2 className="text-4xl font-bold">Advanced</h2>
