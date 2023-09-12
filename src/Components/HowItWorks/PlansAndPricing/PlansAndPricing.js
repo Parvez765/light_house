@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import tickImg from "../../../Assets/PlanAndPricing/tick.png";
+import { BsGlobeAmericas } from "react-icons/bs";
+import { GiMoneyStack, GiPayMoney } from "react-icons/gi";
 
 const PlansAndPricing = () => {
   // All states
@@ -66,7 +68,7 @@ const PlansAndPricing = () => {
       </h2>
 
       {/* Plan Cards */}
-      <div className="flex flex-wrap justify-center items-center gap-4">
+      <div className="flex flex-wrap justify-center items-center gap-4 mb-20">
         <div className="flex flex-col border border-gray-300 hover:border-sky-600 duration-300 ease-in-out rounded-xl px-6 py-8 sm:w-[470px]">
           <div className="flex justify-between items-center gap-6 mb-10">
             <div className="flex flex-col">
@@ -354,6 +356,23 @@ const PlansAndPricing = () => {
               </h2>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center items-center gap-6">
+        <div className="flex items-center justify-center gap-3 bg-red-100 rounded-lg py-8 px-6 border-l-4 border-transparent hover:border-red-300">
+          <BsGlobeAmericas className="text-4xl" />
+          <h2 className="text-xl font-medium">We work with your time zone</h2>
+        </div>
+
+        <div className="flex items-center justify-center gap-3 bg-green-100 rounded-lg py-8 px-6 border-l-4 border-transparent hover:border-green-300">
+          <GiMoneyStack className="text-4xl" />
+          <h2 className="text-xl font-medium">No setup or hidden fees</h2>
+        </div>
+
+        <div className="flex items-center justify-center gap-3 bg-yellow-100 rounded-lg py-8 px-6 border-l-4 border-transparent hover:border-yellow-300">
+          <GiPayMoney className="text-4xl" />
+          <h2 className="text-xl font-medium">Pay and start instantly</h2>
         </div>
       </div>
     </div>
