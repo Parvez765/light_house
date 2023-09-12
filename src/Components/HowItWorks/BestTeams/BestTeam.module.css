@@ -1,0 +1,11 @@
+
+.imgContainer{
+    transform:  translateX(850px);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.cardContainer{
+    background: linear-gradient(rgb(185, 255, 185), rgb(255, 255, 255));
+    border-radius: 8px;
+    /* border: 1px solid black; */
+}
