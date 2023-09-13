@@ -18,7 +18,7 @@ const UnlockingTheMagic = () => {
                         <button className="tryUsFreeBtn flex items-center gap-[12px]">Make Phone Call <FaPhoneAlt/></button>
                     </div>
                 </div>
-                <div className='grid grid-cols-1 lg:grid-cols-3  gap-[30px] mt-[150px]'>
+                <div className='grid grid-cols-1 lg:grid-cols-3  gap-[30px] mt-[60px]'>
                 {
                     provideData?.map(pd => <div className={`${styles.serviceContainer} `}>
                         <img src={pd.img} alt="Services We Provide" className='w-[150px] block mx-auto' />

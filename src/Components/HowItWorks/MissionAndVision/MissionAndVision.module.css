@@ -1,0 +1,26 @@
+.numContainer{
+   padding: 20px;
+    color: rgb(23, 23, 109);
+    border-radius: 12px;
+   
+}
+.mission{
+    background: linear-gradient(rgb(248, 255, 254), rgb(203, 221, 255));
+    /* border-radius: 12px; */
+}
+.connectBtn{
+    background: #0284c7;
+    padding: 15px 50px;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+}
+.tryBtn{
+    background: #0284c7;
+    padding: 15px 50px;
+   
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+}

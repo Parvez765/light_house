@@ -77,7 +77,7 @@ const LetsGetStarted = () => {
 
   return (
     <div>
-      <div className="border border-black">
+      <div>
         <div className="mb-10 mx-4">
           <h2 className="text-4xl font-bold text-center mb-4">
             Let's Get Started...

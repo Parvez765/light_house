@@ -18,49 +18,49 @@ const teams = [
         img: "https://i.ibb.co/h128fsx/image.png",
         name : "Steven Thomas",
         designation : "Marketing Officer",
-        description: "5+ years experience of team lead. Professional and hard worker, team player"
+        description: "2+ years experience of team lead. Professional and hard worker, team player"
     },
     {
         id: 4,
         img: "https://i.ibb.co/zXHyvrF/image.png",
         name : "Steve M. Jonas",
         designation : "FrontEnd Web Developer",
-        description: "5+ years experience of team lead. Professional and hard worker, team player"
+        description: "8+ years experience of team lead. Professional and hard worker, team player"
     },
     {
         id: 5,
         img: "https://i.ibb.co/kqXgC5k/image.png",
         name : "Smith M.",
         designation : "BackEnd Developer",
-        description: "5+ years experience of team lead. Professional and hard worker, team player"
+        description: "6+ years experience of team lead. Professional and hard worker, team player"
     },
     {
         id: 6,
         img: "https://i.ibb.co/8bwg8qY/image.png",
         name : "Mayer Smith",
         designation : "Team Lead",
-        description: "5+ years experience of team lead. Professional and hard worker, team player"
+        description: "2+ years experience of team lead. Professional and hard worker, team player"
     },
     {
         id: 7,
         img: "https://i.ibb.co/kgKB6x9/image.png",
         name : "Aliana Alis",
         designation : "WordPress Developer",
-        description: "5+ years experience of team lead. Professional and hard worker, team player"
+        description: "9+ years experience of team lead. Professional and hard worker, team player"
     },
     {
         id: 8,
         img: "https://i.ibb.co/Hgx4t92/image.png",
         name : "Robert Ros",
         designation : "Team Lead",
-        description: "5+ years experience of team lead. Professional and hard worker, team player"
+        description: "15+ years experience of team lead. Professional and hard worker, team player"
     },
     {
         id: 9,
         img: "https://i.ibb.co/bmPP4tF/image.png",
         name : "Juliyet Alina",
         designation : "CTO",
-        description: "5+ years experience of team lead. Professional and hard worker, team player"
+        description: "6+ years experience of team lead. Professional and hard worker, team player"
     },
     {
         id: 10,

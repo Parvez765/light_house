@@ -1,0 +1,18 @@
+.hireContainer{
+    background: linear-gradient(rgb(248, 255, 254), rgb(203, 221, 255));
+    border-radius: 12px;
+    
+}
+.hireBtn{
+    background: #0284c7;
+    padding: 15px 50px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+}
+.hireBtn:hover{
+    background: #0284c7;
+   
+}
