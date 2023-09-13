@@ -1,12 +1,12 @@
 import React from "react";
-import UnlockingTheMagic from "../../Components/HowItWorks/UnlockingTheMagic/UnlockingTheMagic";
 import PlansAndPricing from "../../Components/HowItWorks/PlansAndPricing/PlansAndPricing";
+import SomeOurWork from "../../Components/HowItWorks/SomeOurWork/SomeOurWork";
 
 const HowItWorks = () => {
   return (
     <div>
-      {/* <UnlockingTheMagic /> */}
       <PlansAndPricing />
+      <SomeOurWork />
     </div>
   );
 };

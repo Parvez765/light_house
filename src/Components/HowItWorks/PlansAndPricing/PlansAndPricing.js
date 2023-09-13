@@ -38,7 +38,7 @@ const PlansAndPricing = () => {
   };
 
   return (
-    <div className="mx-4 my-4">
+    <div className="mx-4 my-28">
       <div className="mb-10">
         <h2 className="font-bold text-4xl md:text-5xl text-center mb-6">
           Plans & Pricing
@@ -69,7 +69,7 @@ const PlansAndPricing = () => {
 
       {/* Plan Cards */}
       <div className="flex flex-wrap justify-center items-center gap-4 mb-20">
-        <div className="flex flex-col border border-gray-300 hover:border-sky-600 duration-300 ease-in-out rounded-xl px-6 py-8 sm:w-[470px]">
+        <div className="flex flex-col border border-gray-300 hover:border-sky-600 duration-300 ease-in-out rounded-xl px-6 py-8 sm:w-[470px] shadow-2xl">
           <div className="flex justify-between items-center gap-6 mb-10">
             <div className="flex flex-col">
               <h2 className="text-4xl font-bold">Basic</h2>
@@ -167,7 +167,7 @@ const PlansAndPricing = () => {
           </div>
         </div>
 
-        <div className="flex flex-col rounded-xl px-2 py-2 sm:w-[480px] bg-gradient-to-r from-blue-200 from-10% via-blue-400 via-40% to-sky-600 to-90%">
+        <div className="flex flex-col rounded-xl px-2 py-2 sm:w-[480px] bg-gradient-to-r from-blue-200 from-10% via-blue-400 via-40% to-sky-600 to-90% shadow-2xl">
           <h2 className="text-white font-semibold text-xl text-center mb-2">
             Most Popular
           </h2>
@@ -273,7 +273,7 @@ const PlansAndPricing = () => {
           </div>
         </div>
 
-        <div className="flex flex-col border border-gray-300 hover:border-sky-600 duration-300 ease-in-out rounded-xl px-6 py-8 sm:w-[470px]">
+        <div className="flex flex-col border border-gray-300 hover:border-sky-600 duration-300 ease-in-out rounded-xl px-6 py-8 sm:w-[470px] shadow-2xl">
           <div className="flex justify-between items-center gap-3 mb-10">
             <div className="flex flex-col">
               <h2 className="text-4xl font-bold">Advanced</h2>
@@ -360,17 +360,17 @@ const PlansAndPricing = () => {
       </div>
 
       <div className="flex justify-center items-center gap-6">
-        <div className="flex items-center justify-center gap-3 bg-red-100 rounded-lg py-8 px-6 border-l-4 border-transparent hover:border-red-300">
+        <div className="flex items-center justify-center gap-3 bg-red-100 rounded-lg py-8 px-6 border-l-4 border-transparent hover:border-red-300 duration-300 ease-in-out shadow-xl">
           <BsGlobeAmericas className="text-4xl" />
           <h2 className="text-xl font-medium">We work with your time zone</h2>
         </div>
 
-        <div className="flex items-center justify-center gap-3 bg-green-100 rounded-lg py-8 px-6 border-l-4 border-transparent hover:border-green-300">
+        <div className="flex items-center justify-center gap-3 bg-green-100 rounded-lg py-8 px-6 border-l-4 border-transparent hover:border-green-300 duration-300 ease-in-out shadow-xl">
           <GiMoneyStack className="text-4xl" />
           <h2 className="text-xl font-medium">No setup or hidden fees</h2>
         </div>
 
-        <div className="flex items-center justify-center gap-3 bg-yellow-100 rounded-lg py-8 px-6 border-l-4 border-transparent hover:border-yellow-300">
+        <div className="flex items-center justify-center gap-3 bg-yellow-100 rounded-lg py-8 px-6 border-l-4 border-transparent hover:border-yellow-300 duration-300 ease-in-out shadow-xl">
           <GiPayMoney className="text-4xl" />
           <h2 className="text-xl font-medium">Pay and start instantly</h2>
         </div>
