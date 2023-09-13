@@ -359,7 +359,7 @@ const PlansAndPricing = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center gap-6">
+      <div className="grid grid-row-3 md:flex md:flex-row justify-center items-center gap-3 lg:gap-6">
         <div className="flex items-center justify-center gap-3 bg-red-100 rounded-lg py-8 px-6 border-l-4 border-transparent hover:border-red-300 duration-300 ease-in-out shadow-xl">
           <BsGlobeAmericas className="text-4xl" />
           <h2 className="text-xl font-medium">We work with your time zone</h2>
