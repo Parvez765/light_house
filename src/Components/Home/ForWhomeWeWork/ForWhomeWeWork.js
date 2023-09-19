@@ -1,9 +1,9 @@
 import React from "react";
-import "./ForWhomeWeWork.css";
+import styles from "./ForWhomeWeWork.module.css";
 
 const ForWhomeWeWork = () => {
     return (
-        <div className='workingContainer mt-[50px] mb-[50px]'>
+        <div className={`${styles.workingContainer}  mt-[50px] mb-[50px]`}>
             <div className='container mx-auto'>
                 <div className='flex flex-col lg:flex-row justify-center items-start gap-[40px]'>
                     <div>

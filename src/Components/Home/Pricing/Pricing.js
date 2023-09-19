@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./Pricing.css"
+import styles from "./Pricing.module.css"
 import basicImage from "../../../Assets/pricing/basic.png"
 import webSize from "../../../Assets/pricing/websize.png"
 import margin from "../../../Assets/pricing/margin.png"
@@ -97,18 +97,18 @@ const Pricing = () => {
     // console.log(minusBtn);
 
     return (
-        <div className='pricingContainer'>
+        <div className={`${styles.pricingContainer}`}>
             <div className='container mx-auto'>
                 <h1 className='text-center text-4xl font-bold p-4'>Check Our Pricing</h1>
                 <p className='text-center -mt-[10px] font-medium'>Introducing a simpler and economical way to get the best photo editing solutions for Pro-photographers, Fashion, Apparel,</p>
             </div>
             <div className='flex flex-col lg:flex-row items-center justify-center mt-6 gap-4'>
-                <button onClick={() => handleClick('Clipping Path')} className={activeBtn === 'Clipping Path' ? "priceActiveBtn" : "priceBtn"} >Clipping Path</button>
-                <button onClick={() => handleClick('Photo Retouching')} className={activeBtn === 'Photo Retouching' ? "priceActiveBtn" : "priceBtn"} >Photo Retouching</button>
-                <button onClick={() => handleClick('Ghost Mannequin')} className={activeBtn === 'Ghost Mannequin' ? "priceActiveBtn" : "priceBtn"} >Ghost Mannequin</button>
-                <button onClick={() => handleClick('Image Masking')} className={activeBtn === 'Image Masking' ? "priceActiveBtn" : "priceBtn"} >Image Masking</button>
+                <button onClick={() => handleClick('Clipping Path')} className={activeBtn === 'Clipping Path' ? styles.priceActiveBtn : styles.priceBtn} >Clipping Path</button>
+                <button onClick={() => handleClick('Photo Retouching')} className={activeBtn === 'Photo Retouching' ? styles.priceActiveBtn : styles.priceBtn} >Photo Retouching</button>
+                <button onClick={() => handleClick('Ghost Mannequin')} className={activeBtn === 'Ghost Mannequin' ? styles.priceActiveBtn : styles.priceBtn} >Ghost Mannequin</button>
+                <button onClick={() => handleClick('Image Masking')} className={activeBtn === 'Image Masking' ? styles.priceActiveBtn : styles.priceBtn} >Image Masking</button>
             </div>
-            <div className='pricingContentContainer 2xl:w-[1200px]'>
+            <div className={`${styles.pricingContentContainer}  2xl:w-[1200px]`}>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-[50px]'>
                     <div>
                         {service === "Basic" && <img src={basicImage} alt="Light House Basic" />}
@@ -118,103 +118,21 @@ const Pricing = () => {
                         {service === "Super Complex" && <img src={superComplex} alt="Light House Super Complex" />}
 
 
-                        <div className='mt-[10px] flex flex-col lg:flex-row gap-4'>
-                            <button onClick={() => handleServiceClick('Basic')} className={service === 'Basic' ? "activeBtn" : "defaultBtn"}>Basic</button>
-                            <button onClick={() => handleServiceClick('Flat Rate')} className={service === 'Flat Rate' ? "activeBtn" : "defaultBtn"}>Flat Rate</button>
-                            <button onClick={() => handleServiceClick('Medium')} className={service === 'Medium' ? "activeBtn" : "defaultBtn"}>Medium</button>
-                            <button onClick={() => handleServiceClick('Complex')} className={service === 'Complex' ? "activeBtn" : "defaultBtn"}>Complex</button>
-                            <button onClick={() => handleServiceClick('Super Complex')} className={service === 'Super Complex' ? "activeBtn" : "defaultBtn"}>Super Complex</button>
+                        <div className='mt-[10px] flex flex-col lg:flex-row gap-[10px]'>
+                            <button onClick={() => handleServiceClick('Basic')} className={service === 'Basic' ? styles.activeBtn : styles.defaultBtn}>Basic</button>
+                            <button onClick={() => handleServiceClick('Flat Rate')} className={service === 'Flat Rate' ? styles.activeBtn : styles.defaultBtn}>Flat Rate</button>
+                            <button onClick={() => handleServiceClick('Medium')} className={service === 'Medium' ? styles.activeBtn : styles.defaultBtn}>Medium</button>
+                            <button onClick={() => handleServiceClick('Complex')} className={service === 'Complex' ? styles.activeBtn : styles.defaultBtn}>Complex</button>
+                            <button onClick={() => handleServiceClick('Super Complex')} className={service === 'Super Complex' ? styles.activeBtn : styles.defaultBtn}>Super Complex</button>
                         </div>
-                        <div className='mt-[16px]'>
-                            {/* <h6>Select Any of Four Services</h6> */}
-                            {/* <div className='grid lg:grid-cols-2 mt-[10px] gap-[10px]'>
-                                <div>
-                                    <div className='additionalServiceContainer'>
-                                        <div className=''>
-                                            <div className='flex gap-[40px] items-center'>
-                                                <div className='flex gap-[10px] items-center'>
-                                                    <div>
-                                                        <figure>
-                                                            <img src={dropShadow} alt="Light House Service" />
-                                                        </figure>
-                                                    </div>
-                                                    <div>
-                                                        <p className='font-medium'>Drop Shadow</p>
-                                                        <p>(+$0.5 per image)</p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <img src={checkBox} alt="LightHouse CheckBox" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='additionalServiceContainer mt-[12px]'>
-                                        <div className=''>
-                                            <div className='flex gap-[40px] items-center'>
-                                                <div className='flex gap-[10px] items-center'>
-                                                    <div>
-                                                        <figure>
-                                                            <img src={reflection} alt="Light House Service" />
-                                                        </figure>
-                                                    </div>
-                                                    <div>
-                                                        <p className='font-medium'>Reflection</p>
-                                                        <p>(+$0.5 per image)</p>
-                                                    </div>
-                                                </div>
-                                                <img src={checkBox} alt="LightHouse CheckBox" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className='additionalServiceContainer'>
-                                        <div className=''>
-                                            <div className='flex gap-[40px] items-center'>
-                                                <div className='flex gap-[10px] items-center'>
-                                                    <div>
-                                                        <figure>
-                                                            <img src={customShadow} alt="Light House Service" />
-                                                        </figure>
-                                                    </div>
-                                                    <div>
-                                                        <p className='font-medium'>Custom Shadow</p>
-                                                        <p>(+$0.5 per image)</p>
-                                                    </div>
-                                                </div>
-                                                <img src={checkBox} alt="LightHouse CheckBox" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='additionalServiceContainer mt-[12px]'>
-                                        <div className=''>
-                                            <div className='flex gap-[40px] items-center'>
-                                                <div className='flex gap-[10px] items-center'>
-                                                    <div>
-                                                        <figure>
-                                                            <img src={keepShdow} alt="Light House Service" />
-                                                        </figure>
-                                                    </div>
-                                                    <div>
-                                                        <p className='font-medium'>Keep Shadow</p>
-                                                        <p>(+$0.5 per image)</p>
-                                                    </div>
-                                                </div>
-                                                <img src={checkBox} alt="LightHouse CheckBox" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> */}
-                        </div>
+                      
                         <div className='mt-[16px]'>
                             <h6>You Can Select One Or All</h6>
                             <div className='grid lg:grid-cols-2 mt-[10px] gap-[10px]'>
                                 <div>
-                                    <div className='additionalServiceContainer'>
+                                    <div className={`${styles.additionalServiceContainer}`}>
                                         <div className=''>
-                                            <div className='flex gap-[40px] items-center'>
+                                            <div className='flex items-center gap-[22px]'>
                                                 <div className='flex gap-[10px] items-center'>
                                                     <div>
                                                         <figure>
@@ -234,9 +152,9 @@ const Pricing = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='additionalServiceContainer mt-[12px]'>
+                                    <div className={`${styles.additionalServiceContainer}  mt-[12px]`}>
                                         <div className=''>
-                                            <div className='flex gap-[40px] items-center'>
+                                            <div className='flex items-center gap-[22px]'>
                                                 <div className='flex gap-[10px] items-center'>
                                                     <div>
                                                         <figure>
@@ -258,9 +176,9 @@ const Pricing = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className='additionalServiceContainer'>
+                                    <div className={`${styles.additionalServiceContainer}`}>
                                         <div className=''>
-                                            <div className='flex gap-[40px] items-center'>
+                                            <div className='flex items-center gap-[22px]'>
                                                 <div className='flex gap-[10px] items-center'>
                                                     <div>
                                                         <figure>
@@ -280,9 +198,9 @@ const Pricing = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='additionalServiceContainer mt-[12px]'>
+                                    <div className={`${styles.additionalServiceContainer}  mt-[12px]`}>
                                         <div className=''>
-                                            <div className='flex gap-[40px] items-center'>
+                                            <div className='flex items-center gap-[22px]'>
                                                 <div className='flex gap-[10px] items-center'>
                                                     <div>
                                                         <figure>
@@ -306,7 +224,7 @@ const Pricing = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='pricingCalculator'>
+                    <div className={`${styles.pricingCalculator}`}>
                         <h6 className='font-medium text-[20px]'>{activeBtn}</h6>
                         <h3 className='font-bold text-sky-600 text-[40px] lg:text-[60px] -mt-[10px]'>${value * add}.00<span className='text-[20px] lg:text-[40px]'>/img</span></h3>
                         <h6 className='font-medium text-[20px] -mt-[10px]'>Complexity: <span className='font-bold text-sky-600'>{service}</span></h6>

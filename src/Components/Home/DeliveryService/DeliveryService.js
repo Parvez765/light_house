@@ -1,16 +1,16 @@
 import React from "react";
-import "./DeliverService.css";
+import styles from "./DeliverService.module.css";
 
 const DeliveryService = () => {
   return (
-    <div className="serviceContentContainer">
+    <div className={`${styles.serviceContentContainer}`}>
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-[100px]">
-          <div className="serviceContainer p-4 lg:w-[512px] h-[537px]">
+          <div className={`${styles.serviceContainer} p-4 lg:w-[512px] h-[537px]`}>
             <img
               src="https://i.ibb.co/Wt8BPXs/one.png"
               alt="Studio MetroDesk Service One"
-              className="serviceImage"
+              className={`${styles.serviceImage}`}
             />
             <div>
               <h2 className="text-[30px] font-bold mt-[8px] mb-[8px]">
@@ -22,11 +22,11 @@ const DeliveryService = () => {
               </p>
             </div>
           </div>
-          <div className="serviceContainer p-4 lg:w-[512px] h-[537px]">
+          <div className={`${styles.serviceContainer} p-4 lg:w-[512px] h-[537px]`}>
             <img
               src="https://i.ibb.co/F0c2K5C/two.png"
               alt="Studio MetroDesk Service One"
-              className="serviceImage"
+              className={`${styles.serviceImage}`}
             />
             <div>
               <h2 className="text-[30px] font-bold mt-[8px] mb-[8px]">

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Hero.css";
+import styles from "./Hero.module.css";
 import ReactBeforeSliderComponent from "react-before-after-slider-component";
 import "react-before-after-slider-component/dist/build.css";
 
@@ -24,7 +24,7 @@ const Hero = () => {
             and Pro-Photographers. Our 100+ pro photo editors work 24/7 to
             provide you with the most personalized solutions in the market
           </p>
-          <button className="tryUsFreeBtn">Try Us Free</button>
+          <button className={`${styles.tryUsFreeBtn}`}>Try Us Free</button>
           <p className="mt-[8px] font-medium text-[#667085] text-[14px]">
             No Credit Card Required
           </p>

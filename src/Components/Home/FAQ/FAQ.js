@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./FAQ.css"
+import styles from "./FAQ.module.css"
 import faqs from "../../../data/faq"
 import {FaAngleDown, FaAngleUp} from "react-icons/fa";
 
@@ -17,8 +17,8 @@ const FAQ = () => {
     }
     
     return (
-        <div className='faqContainer'>
-            <div className='container mx-auto text-center '>
+        <div className={`${styles.faqContainer}`}>
+            <div className='container mx-auto text-center'>
                 <h1 className='text-[25px] lg:text-[35px] font-bold'>Frequently asked questions</h1>
                 <p>Everything you need to know about the product and billing.</p>
                 <div className='mt-[50px] text-left'>
