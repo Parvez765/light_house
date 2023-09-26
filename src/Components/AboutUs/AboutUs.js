@@ -22,7 +22,7 @@ const AboutUs = () => {
         alt=""
       />
 
-      <div className="flex flex-col lg:flex-row justify-center gap-20 mx-4 mb-32">
+      <div className="flex flex-col lg:flex-row justify-center gap-20 mx-4 mb-[100px] sm:mb-[250px]">
         <div className="flex flex-col text-center">
           <h2 className="text-gray-600 text-5xl sm:text-7xl font-bold">
             5000+
@@ -51,7 +51,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-6 mx-4">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-10 mx-4 mb-[200px]">
         <div className="max-w-xl">
           <h2 className="text-6xl font-bold">Actually...</h2>
           <h2 className="text-6xl font-bold mb-6">it was never about 'us' !</h2>
@@ -65,6 +65,28 @@ const AboutUs = () => {
         </div>
 
         <img src={onlyLogo} className="w-[150px] md:w-[200px]" alt="" />
+      </div>
+
+      <div className="flex justify-center">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 p-16 max-w-max rounded-2xl bg-gradient-to-br from-white from-50% via-white via-70% to-sky-500 to-100%">
+          <div className="flex flex-col max-w-xl">
+            <div class="flex mb-6">
+              <h1 class="text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-sky-600">
+                We are a hybrid company.
+              </h1>
+            </div>
+
+            <h2 className="text-5xl lg:text-6xl font-bold">
+              Fully flexible to our employees and customers.
+            </h2>
+          </div>
+
+          <h2 className="text-2xl text-gray-600 font-medium max-w-lg">
+            At lighthouse, we have only one rule – act with utmost integrity and
+            professionalism. No matter where you or we are, we make sure you get
+            the service you need. Properly, consistently, perfectly.
+          </h2>
+        </div>
       </div>
     </div>
   );
