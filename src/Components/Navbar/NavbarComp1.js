@@ -33,18 +33,17 @@ const NavbarComp1 = () => {
         </div>
 
         <NavLink
-          to="/company"
-          className="flex justify-center items-center text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out"
-        >
-          <h2 className="text-lg xl:text-xl font-semibold">Company</h2>
-          <MdKeyboardArrowDown />
-        </NavLink>
-
-        <NavLink
           to="/pricing"
           className="text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out"
         >
           <h2 className="text-lg xl:text-xl font-semibold">Pricing</h2>
+        </NavLink>
+
+        <NavLink
+          to="/about_us"
+          className="flex justify-center items-center text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out"
+        >
+          <h2 className="text-lg xl:text-xl font-semibold">About Us</h2>
         </NavLink>
       </div>
 
