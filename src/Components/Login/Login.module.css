@@ -1,0 +1,15 @@
+.inputContainer{
+    background-color: rgb(237, 237, 237);
+    padding: 15px 10px;
+    width: 100%;
+    border-radius: 8px;
+}
+.signInButton{
+    background-color: #0284c7;
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+}

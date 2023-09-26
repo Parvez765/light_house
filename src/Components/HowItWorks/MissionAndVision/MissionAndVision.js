@@ -5,7 +5,7 @@ import mission from "../../../data/mission";
 const MissionAndVision = () => {
     return (
         <div>
-            <div className="container  mx-auto p-10 lg:mt-[60px]">
+            <div className="container  mx-auto px-10 lg:mt-[60px]">
                 <div className="grid grid-cols-1 lg:gap-[70px] lg:grid-cols-3 justify-items-center justify-center items-center">
                     {mission?.map((mi) => (
                         <div className={`${styles.numContainer} w-full text-center`}>

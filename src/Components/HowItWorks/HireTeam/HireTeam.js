@@ -3,7 +3,7 @@ import styles from "./HireTeam.module.css"
 
 const HireTeam = () => {
     return (
-        <div className='container mx-auto p-3 lg:p-0 lg:mt-[120px] mb-[40px] lg:mb-[120px]'>
+        <div className='container mx-auto p-3 lg:p-0 mt-[80px] mb-[40px]'>
            <div>
             <div className={`grid lg:grid-cols-2 gap-[70px] px-10 py-10 items-center ${styles.hireContainer}`}>
                     <div className=''>
