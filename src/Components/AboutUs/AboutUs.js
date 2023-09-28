@@ -2,10 +2,37 @@ import React from "react";
 import AllTitle from "../../Hooks/AllTitle/AllTitle";
 import pic1 from "../../Assets/AboutUs/pic1.jpeg";
 import pic2 from "../../Assets/AboutUs/pic2.jpg";
+import human1 from "../../Assets/AboutUs/human1.jpg";
+import human2 from "../../Assets/AboutUs/human2.jpg";
+import human3 from "../../Assets/AboutUs/human3.jpg";
 import onlyLogo from "../../Assets/AboutUs/only_logo.png";
+import { BsArrowUpRight } from "react-icons/bs";
 
 const AboutUs = () => {
   AllTitle("About Us");
+
+  const perseverances = [
+    {
+      name: "Rasel",
+      title:
+        "One of our best Quality Assurance Managers. Learn how he became a part of our family!",
+      human: human1,
+    },
+
+    {
+      name: "Saida",
+      title:
+        "One of our most skilled photo editors. Learn her story in her own words!",
+      human: human2,
+    },
+
+    {
+      name: "Sobhan",
+      title:
+        "One of our most skilled traffic controller. Learn his story in from his own words!",
+      human: human3,
+    },
+  ];
   return (
     <div className="my-10">
       <div className="flex flex-col items-center mb-10 mx-4">
@@ -92,7 +119,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="flex justify-center mx-4">
+      <div className="flex justify-center mx-4 mb-[200px]">
         <div className="bg-gradient-to-r from-yellow-100 to-green-100 flex flex-col items-center gap-10 max-w-max rounded-xl p-10">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <h2 className="text-5xl sm:text-6xl text-center md:text-left font-bold max-w-xl">
@@ -110,6 +137,47 @@ const AboutUs = () => {
             className="xl:max-w-[1000px] object-cover rounded-xl"
             alt=""
           />
+        </div>
+      </div>
+
+      <div className="mx-4">
+        <h2 className="text-5xl sm:text-6xl text-center font-bold mb-6">
+          From Perseverance to Finesse
+        </h2>
+        <h2 className="text-xl text-gray-600 text-center font-medium mb-10">
+          Our journey was not simple. For 20+ years, we’ve trained 1595+ photo
+          editors and picked the best of them to work for you. Here are three of
+          your photo editors sharing their stories.
+        </h2>
+
+        <div className="flex justify-center">
+          <div className="flex flex-wrap justify-center gap-5 p-6 lg:gap-6 2xl:gap-10 bg-gradient-to-b from-gray-100 to-sky-100">
+            {perseverances?.map((perseverance) => (
+              <div className="max-w-[400px] shadow-xl drop-shadow-xl">
+                <img
+                  src={perseverance?.human}
+                  className="rounded-t-xl object-cover object-center h-[400px]"
+                  alt=""
+                />
+
+                <div className="bg-white hover:bg-gray-300 duration-300 ease-in-out px-5 py-3">
+                  <h2 className="text-lg font-semibold text-sky-700 mb-4">
+                    Meet {perseverance?.name}
+                  </h2>
+
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-10 sm:h-[150px]">
+                    {perseverance?.title}
+                  </h2>
+
+                  <div className="flex items-center max-w-max gap-3 text-gray-600 hover:text-sky-600 duration-300 ease-in-out hover:cursor-pointer">
+                    <h2 className="text-xl font-medium">Read more</h2>
+
+                    <BsArrowUpRight className="font-bold" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
