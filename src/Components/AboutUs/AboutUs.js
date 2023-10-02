@@ -35,50 +35,54 @@ const AboutUs = () => {
   ];
   return (
     <div className="my-10">
-      <div className="flex flex-col items-center mb-10 mx-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
-          Welcome to
-        </h2>
-        <h2 className="text-5xl md:text-6xl font-bold text-center text-sky-900">
-          lighthouse
-        </h2>
+      {/* Welcome to lighthouse */}
+      <div>
+        <div className="flex flex-col items-center mb-10 mx-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+            Welcome to
+          </h2>
+          <h2 className="text-5xl md:text-6xl font-bold text-center text-sky-900">
+            lighthouse
+          </h2>
+        </div>
+
+        <img
+          src={pic1}
+          className="w-full h-[300px] xl:h-[400px] object-cover object-center mb-24 md:mb-32"
+          alt=""
+        />
+
+        <div className="flex flex-col lg:flex-row justify-center gap-20 mx-4 mb-[100px] sm:mb-[250px]">
+          <div className="flex flex-col text-center">
+            <h2 className="text-gray-600 text-5xl sm:text-7xl font-bold">
+              5000+
+            </h2>
+            <h2 className="text-gray-600 text-xl font-medium">
+              companies are thriving with our help
+            </h2>
+          </div>
+
+          <div className="flex flex-col text-center">
+            <h2 className="text-gray-600 text-5xl sm:text-7xl font-bold">
+              12000+
+            </h2>
+            <h2 className="text-gray-600 text-xl font-medium">
+              images edited every day
+            </h2>
+          </div>
+
+          <div className="flex flex-col text-center">
+            <h2 className="text-gray-600 text-5xl sm:text-7xl font-bold">
+              1795+
+            </h2>
+            <h2 className="text-gray-600 text-xl font-medium">
+              individuals trained and empowered in 15+ years
+            </h2>
+          </div>
+        </div>
       </div>
 
-      <img
-        src={pic1}
-        className="w-full h-[300px] xl:h-[400px] object-cover object-center mb-24 md:mb-32"
-        alt=""
-      />
-
-      <div className="flex flex-col lg:flex-row justify-center gap-20 mx-4 mb-[100px] sm:mb-[250px]">
-        <div className="flex flex-col text-center">
-          <h2 className="text-gray-600 text-5xl sm:text-7xl font-bold">
-            5000+
-          </h2>
-          <h2 className="text-gray-600 text-xl font-medium">
-            companies are thriving with our help
-          </h2>
-        </div>
-
-        <div className="flex flex-col text-center">
-          <h2 className="text-gray-600 text-5xl sm:text-7xl font-bold">
-            12000+
-          </h2>
-          <h2 className="text-gray-600 text-xl font-medium">
-            images edited every day
-          </h2>
-        </div>
-
-        <div className="flex flex-col text-center">
-          <h2 className="text-gray-600 text-5xl sm:text-7xl font-bold">
-            1795+
-          </h2>
-          <h2 className="text-gray-600 text-xl font-medium">
-            individuals trained and empowered in 15+ years
-          </h2>
-        </div>
-      </div>
-
+      {/* It was never about us */}
       <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-10 mx-4 mb-[200px]">
         <div className="max-w-xl">
           <h2 className="text-5xl sm:text-6xl font-bold">Actually...</h2>
@@ -97,6 +101,7 @@ const AboutUs = () => {
         <img src={onlyLogo} className="w-[150px] md:w-[200px]" alt="" />
       </div>
 
+      {/* We are a hybrid company */}
       <div className="flex justify-center mb-[200px] mx-4">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 p-16 max-w-max rounded-2xl bg-gradient-to-br from-white from-50% via-white via-70% to-sky-300 to-100%">
           <div className="flex flex-col max-w-xl">
@@ -119,6 +124,7 @@ const AboutUs = () => {
         </div>
       </div>
 
+      {/* We are a family of 300+ passionate individuals */}
       <div className="flex justify-center mx-4 mb-[200px]">
         <div className="bg-gradient-to-r from-yellow-100 to-green-100 flex flex-col items-center gap-10 max-w-max rounded-xl p-10">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
@@ -140,7 +146,8 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="mx-4">
+      {/* From perseverance to Finesse */}
+      <div className="mx-4 mb-[200px]">
         <h2 className="text-5xl sm:text-6xl text-center font-bold mb-6">
           From Perseverance to Finesse
         </h2>
@@ -177,6 +184,80 @@ const AboutUs = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Customer-Centricity is our core value */}
+      <div className="flex justify-center">
+        <div className="flex flex-col mx-4 sm:mx-10 lg:w-[800px] xl:w-[900px] 2xl:w-[1100px]">
+          <h2 className="text-4xl sm:text-6xl text-gray-600 font-bold text-center mb-24">
+            Customer-Centricity is our core value. But the journey towards it
+            wasn’t smooth and has never been easy.
+          </h2>
+
+          <h2 className="text-4xl sm:text-6xl font-bold mb-14">
+            Let's dive into our story!
+          </h2>
+
+          {/* ----------------- */}
+          <div className="flex flex-col md:flex-row justify-center md:items-center gap-6 md:gap-10 mb-16">
+            <h2 className="text-4xl sm:text-6xl font-bold">2005</h2>
+            <h2 className="text-lg sm:text-2xl font-semibold text-gray-600">
+              The story goes back to a time, when inflation was rising, and the
+              unemployment rate in Bangladesh was skyrocketing. Where school
+              graduates were falling short of getting employed, what about the
+              drop-outs?
+            </h2>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-center md:items-center gap-6 md:gap-10 mb-16">
+            <h2 className="text-4xl sm:text-6xl font-bold">2008</h2>
+            <h2 className="text-lg sm:text-2xl font-semibold text-gray-600">
+              That’s the question that struck our founder, Shariar Tanvir. Do
+              you want to know a secret? He is the Jack of all trades and master
+              of many (but he doesn’t know that yet). Tanvir wanted to make a
+              change in his community. But how?
+            </h2>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-center md:items-center gap-6 md:gap-10 mb-16">
+            <h2 className="text-4xl sm:text-6xl font-bold">2012</h2>
+            <h2 className="text-lg sm:text-2xl font-semibold text-gray-600">
+              Would you take a chance on a recovered addict? A school drop-out?
+              An unemployed but educated son of a farmer or ‘housewife’?
+              Socially ostracized divorced girls and women? People from
+              different ages, casts, backgrounds, and diversity? Tanvir did.
+            </h2>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-center md:items-center gap-6 md:gap-10 mb-16">
+            <h2 className="text-4xl sm:text-6xl font-bold">2014</h2>
+            <h2 className="text-lg sm:text-2xl font-semibold text-gray-600">
+              He made this umbrella named lighthouse, trained ‘his’ people
+              (that’s what he likes to call it!), and made them empowered
+              through his constantly evolving innovations and business
+              strategies.
+            </h2>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-center md:items-center gap-6 md:gap-10 mb-16">
+            <h2 className="text-4xl sm:text-6xl font-bold">2018</h2>
+            <h2 className="text-lg sm:text-2xl font-semibold text-gray-600">
+              By this time, lighthouse has been operating in three offices, two
+              in Bangladesh and one in the USA, with 100+ photo editors working
+              around the clock to serve its clients best.
+            </h2>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-center md:items-center gap-6 md:gap-10 mb-16">
+            <h2 className="text-4xl sm:text-6xl font-bold">2023</h2>
+            <h2 className="text-lg sm:text-2xl font-semibold text-gray-600">
+              Now, we, more than 250+ people, are living happily ever after
+              under his leadership at lighthouse and are ‘forced’ (we mean it!)
+              to be continually evolving, learning, and training for the next
+              level of the next future.
+            </h2>
           </div>
         </div>
       </div>
