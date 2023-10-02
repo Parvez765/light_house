@@ -1,12 +1,23 @@
 import React from "react";
 import AllTitle from "../../Hooks/AllTitle/AllTitle";
+
 import pic1 from "../../Assets/AboutUs/pic1.jpeg";
 import pic2 from "../../Assets/AboutUs/pic2.jpg";
+
 import human1 from "../../Assets/AboutUs/human1.jpg";
 import human2 from "../../Assets/AboutUs/human2.jpg";
 import human3 from "../../Assets/AboutUs/human3.jpg";
+
+import office1 from "../../Assets/AboutUs/office1.jpg";
+import office2 from "../../Assets/AboutUs/office2.jpeg";
+import office3 from "../../Assets/AboutUs/office3.jpg";
+import office4 from "../../Assets/AboutUs/office4.jpg";
+import office5 from "../../Assets/AboutUs/office5.jpeg";
+import office6 from "../../Assets/AboutUs/office6.jpg";
+
 import onlyLogo from "../../Assets/AboutUs/only_logo.png";
 import photographer from "../../Assets/AboutUs/PG.jpg";
+
 import { BsArrowUpRight } from "react-icons/bs";
 
 const AboutUs = () => {
@@ -264,7 +275,7 @@ const AboutUs = () => {
       </div>
 
       {/* Where’re you in our story? */}
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-[200px]">
         <div className="flex flex-col-reverse xl:flex-row justify-center items-center gap-10 xl:w-[1100px] 2xl:w-[1300px] mx-4">
           <div>
             <h2 className="text-5xl sm:text-6xl font-bold mb-14">
@@ -290,6 +301,55 @@ const AboutUs = () => {
             className="xl:w-[700px] 2xl:w-[800px]"
             alt=""
           />
+        </div>
+      </div>
+
+      {/* Life at lighthouse */}
+      <div className="mx-4 mb-[100px]">
+        <h2 className="text-5xl sm:text-6xl font-bold text-center mb-10">
+          Life at lighthouse
+        </h2>
+
+        <div className="flex justify-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[1500px]">
+            <img
+              src={office1}
+              className="rounded-xl h-full object-cover"
+              alt=""
+            />
+
+            <div className="grid grid-rows-2 gap-4">
+              <img
+                src={office2}
+                className="rounded-xl h-full object-cover"
+                alt=""
+              />
+              <img
+                src={office3}
+                className="rounded-xl h-full object-cover"
+                alt=""
+              />
+            </div>
+
+            <img
+              src={office4}
+              className="rounded-xl h-full object-cover hidden md:block"
+              alt=""
+            />
+
+            <div className="hidden lg:grid lg:grid-rows-2 lg:gap-4">
+              <img
+                src={office5}
+                className="rounded-xl h-full object-cover"
+                alt=""
+              />
+              <img
+                src={office6}
+                className="rounded-xl h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
