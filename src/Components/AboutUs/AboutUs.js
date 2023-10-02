@@ -6,6 +6,7 @@ import human1 from "../../Assets/AboutUs/human1.jpg";
 import human2 from "../../Assets/AboutUs/human2.jpg";
 import human3 from "../../Assets/AboutUs/human3.jpg";
 import onlyLogo from "../../Assets/AboutUs/only_logo.png";
+import photographer from "../../Assets/AboutUs/PG.jpg";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const AboutUs = () => {
@@ -189,7 +190,7 @@ const AboutUs = () => {
       </div>
 
       {/* Customer-Centricity is our core value */}
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-[200px]">
         <div className="flex flex-col mx-4 sm:mx-10 lg:w-[800px] xl:w-[900px] 2xl:w-[1100px]">
           <h2 className="text-4xl sm:text-6xl text-gray-600 font-bold text-center mb-24">
             Customer-Centricity is our core value. But the journey towards it
@@ -259,6 +260,36 @@ const AboutUs = () => {
               level of the next future.
             </h2>
           </div>
+        </div>
+      </div>
+
+      {/* Where’re you in our story? */}
+      <div className="flex justify-center">
+        <div className="flex flex-col-reverse xl:flex-row justify-center items-center gap-10 xl:w-[1100px] 2xl:w-[1300px] mx-4">
+          <div>
+            <h2 className="text-5xl sm:text-6xl font-bold mb-14">
+              Where’re you in our story?
+            </h2>
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-600">
+              See that’s the main theme of our company. We never meant us when
+              we said ‘we.’ We meant ‘you.’ We don’t process or edit or retouch
+              images for you, we provide you with the solutions you need most.
+              <br />
+              <br />
+              As we have said, we’re the middleman. But how is that? Each
+              payment we receive from you goes directly to your photo editor,
+              who works 24/7 for you, with the lowest of opportunities in life
+              and the highest of skills. You are not paying for your work, you
+              are empowering one of your mates to get through life a little
+              easier.
+            </h2>
+          </div>
+
+          <img
+            src={photographer}
+            className="xl:w-[700px] 2xl:w-[800px]"
+            alt=""
+          />
         </div>
       </div>
     </div>
