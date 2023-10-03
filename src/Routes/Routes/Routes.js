@@ -6,6 +6,7 @@ import PricingPage from "../../Pages/PricingPage/PricingPage";
 import LoginPage from "../../Pages/LoginPage/LoginPage";
 import SignUpPage from "../../Pages/SignUpPage/SignUpPage";
 import CareerPage from "../../Pages/CareerPage/CareerPage";
+import AboutUs from "../../Pages/AboutUs/AboutUs";
 
 export const router = createBrowserRouter([
   {
@@ -35,7 +36,12 @@ export const router = createBrowserRouter([
       {
         path : "/career",
         element : <CareerPage/>
-      }
+      },
+      {
+        path: "/about_us",
+        element: <AboutUs />
+      }  
+      
     ],
   },
 ]);
