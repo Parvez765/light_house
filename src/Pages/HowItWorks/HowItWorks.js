@@ -14,20 +14,21 @@ import AllTitle from "../../Hooks/AllTitle/AllTitle";
 
 
 const HowItWorks = () => {
-  
+
     AllTitle("How It Works");
-  return (
-    <div>
-      <PlansAndPricing />
-      <SomeOurWork />
-           <BestTeams/>
-           <HireTeam/>
-           <WeServe/>
-           <FAQ/>
-           <SpeakWith/>
-           <MissionAndVision/>
-    </div>
-  );
+    return (
+        <div>
+            <UnlockingTheMagic/>
+            <PlansAndPricing />
+            <SomeOurWork />
+            <BestTeams />
+            <HireTeam />
+            <WeServe />
+            <FAQ />
+            <SpeakWith />
+            <MissionAndVision />
+        </div>
+    );
 };
 
 export default HowItWorks;
