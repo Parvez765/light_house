@@ -3,6 +3,7 @@ import PlansAndPricing from "../../Components/HowItWorks/PlansAndPricing/PlansAn
 import SomeOurWork from "../../Components/HowItWorks/SomeOurWork/SomeOurWork";
 import AllTitle from "../../Hooks/AllTitle/AllTitle";
 
+
 const HowItWorks = () => {
   AllTitle("How It Works");
   return (
