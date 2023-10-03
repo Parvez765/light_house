@@ -5,6 +5,7 @@ import HowItWorks from "../../Pages/HowItWorks/HowItWorks";
 import PricingPage from "../../Pages/PricingPage/PricingPage";
 import LoginPage from "../../Pages/LoginPage/LoginPage";
 import SignUpPage from "../../Pages/SignUpPage/SignUpPage";
+import CareerPage from "../../Pages/CareerPage/CareerPage";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path : "/signup",
         element : <SignUpPage/>
+      },
+      {
+        path : "/career",
+        element : <CareerPage/>
       }
     ],
   },
