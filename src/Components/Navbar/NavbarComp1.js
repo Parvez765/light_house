@@ -40,6 +40,13 @@ const NavbarComp1 = () => {
         </NavLink>
 
         <NavLink
+          to="/career"
+          className="flex justify-center items-center text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out"
+        >
+          <h2 className="text-lg xl:text-xl font-semibold">Career</h2>
+        </NavLink>
+
+        <NavLink
           to="/about_us"
           className="flex justify-center items-center text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out"
         >
@@ -48,10 +55,7 @@ const NavbarComp1 = () => {
       </div>
 
       <div className="hidden lg:flex justify-center items-center gap-2">
-        <NavLink
-          to="/get_quote"
-          className="text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out mr-2 xl:mr-4"
-        >
+        <NavLink className="text-[#595a5c] hover:text-sky-600 duration-300 ease-in-out mr-2 xl:mr-4">
           <h2 className="text-lg xl:text-xl font-semibold">Get a quote</h2>
         </NavLink>
 
@@ -62,10 +66,7 @@ const NavbarComp1 = () => {
           <h2 className="text-lg xl:text-xl font-semibold py-2 px-4">Login</h2>
         </NavLink>
 
-        <NavLink
-          to="/get_started"
-          className="text-white bg-sky-700 hover:bg-sky-600 rounded-lg duration-300 ease-in-out"
-        >
+        <NavLink className="text-white bg-sky-700 hover:bg-sky-600 rounded-lg duration-300 ease-in-out">
           <h2 className="text-lg xl:text-xl font-semibold py-2 px-4">
             Get Started
           </h2>

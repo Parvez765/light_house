@@ -355,9 +355,20 @@ const NavMobile = () => {
               </Link>
 
               <Link
-                to="/get_quote"
+                to="/career"
                 className="text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out px-4 py-4"
               >
+                Career
+              </Link>
+
+              <Link
+                to="/about_us"
+                className="text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out px-4 py-4"
+              >
+                About Us
+              </Link>
+
+              <Link className="text-[#595a5c] text-xl hover:text-sky-600 duration-300 ease-in-out px-4 py-4">
                 Get a quote
               </Link>
             </div>
