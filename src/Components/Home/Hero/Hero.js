@@ -16,7 +16,7 @@ const Hero = () => {
       {/* Whole Container */}
       <div className="lg:mt-[50px] mb-[80px] p-[20px] grid lg:grid-cols-2 gap-[20px] items-center justify-center">
         <div>
-          <h1 className="text-[60px] md:text-[80px] font-bold leading-[60px] lg:leading-[80px]">
+          <h1 className="text-[50px] md:text-[80px] font-bold leading-[50px] lg:leading-[80px]">
             We Make <span className="text-sky-600">Retouching</span> Easy
           </h1>
           <p className="text-[18px] mt-[16px]">

@@ -37,9 +37,9 @@ const DeliveryService = () => {
                 you need. Infrastructure and project management is our
                 responsibilitys.
               </p>
-              <div className="mt-[20px]">
+              {/* <div className="mt-[20px]">
                 <button className="buildTeamBtn">Build My Team</button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

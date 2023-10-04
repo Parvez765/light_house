@@ -10,7 +10,7 @@ const ForWhomeWeWork = () => {
                         <img src="https://i.ibb.co/C6z0Z7k/image2.gif" alt="Studio MetroDesk Whom We Work" />
                     </div>
                     <div>
-                        <h2 className="text-[50px] font-bold mb-[8px]">We work alongside you, <br/> for you! </h2>
+                        <h2 className="text-[50px] font-bold mb-[8px] leading-[60px]">We work alongside you, <br/> for you! </h2>
                        <div className='mt-[16px] lg:w-[650px]'>
                         <p className='text-[18px]'><span className='font-bold'>We designed our services</span> in a manner that you can get the best photo editing solutions in the industry within your budget, time and preference. Meet Studio Metrodesk, your online post-production partner!</p> <br></br>
                             <p className='text-[18px]'><span className='font-bold'>We are considered a back office </span>to product photographers, e-commerce businesses, Amazon sellers and global brands. Why spend weeks on editing, formatting images when you can simply get professionally done photos within hours?</p><br></br>

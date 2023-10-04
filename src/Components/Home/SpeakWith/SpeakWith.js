@@ -12,7 +12,7 @@ const SpeakWith = () => {
                     <p>Hi, I would love to answer your questions. Give me a call or send an email.</p>
                 </div>
                 <div className='informationContainer lg:w-[850px] block mx-auto mt-[30px] rounded-lg'>
-                    <div className='flex justify-between'>
+                    <div className='flex items-center justify-center lg:justify-between'>
                         <div className='flex flex-col justify-between p-10 '>
                             <div>
                                 <h1 className='font-bold text-[30px]'>Shariar Tanvir</h1>
