@@ -128,7 +128,7 @@ const Pricing = () => {
                       
                         <div className='mt-[16px]'>
                             <h6>You Can Select One Or All</h6>
-                            <div className='grid lg:grid-cols-2 mt-[10px] gap-[10px]'>
+                            <div className='grid grid-cols-2 mt-[10px] gap-[10px]'>
                                 <div>
                                     <div className={`${styles.additionalServiceContainer}`}>
                                         <div className=''>

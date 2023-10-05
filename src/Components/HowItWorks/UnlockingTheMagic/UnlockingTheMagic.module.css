@@ -1,8 +1,15 @@
 .headingContainer{
-    background: linear-gradient(rgb(209, 224, 255), white)
+    background: linear-gradient(rgb(242, 246, 255), white)
     /* border: 1px solid; */
     /* height: 100vh */
 }
+.heading{
+    background: -webkit-linear-gradient(right, #1074cb, #02cea2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 .serviceContainer{
     background: linear-gradient(rgb(148, 255, 235), rgb(255, 255, 255));
     padding: 30px;
